@@ -3,15 +3,15 @@
 import AOCLib
 import XCTest
 
-final class Test2022: XCTestCase {
+final class Test2023: XCTestCase {
 	func testOne() throws {
-		testOne(Solve15())
+		testOne(Solve1())
 	}
 
 	func testAll() throws {
 		let totalTime = Stopwatch()
 
-		let puzzles = Puzzles2022()
+		let puzzles = Puzzles2023()
 
 		puzzles.puzzles.puzzles.forEach { puzzle in
 			print("Testing \(puzzle.id): \(puzzle.name)")
