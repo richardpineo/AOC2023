@@ -12,19 +12,30 @@
 		BF3E12BF2B1D5D5100F148F3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF3E12BE2B1D5D5100F148F3 /* Assets.xcassets */; };
 		BF3E12C22B1D5D5100F148F3 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF3E12C12B1D5D5100F148F3 /* Preview Assets.xcassets */; };
 		BF3E12CC2B1D5D5100F148F3 /* AOC2023Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF3E12CB2B1D5D5100F148F3 /* AOC2023Tests.swift */; };
-		BF3E12D62B1D5D5100F148F3 /* AOC2023UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF3E12D52B1D5D5100F148F3 /* AOC2023UITests.swift */; };
-		BF3E12D82B1D5D5100F148F3 /* AOC2023UITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF3E12D72B1D5D5100F148F3 /* AOC2023UITestsLaunchTests.swift */; };
+		BF3E12E52B1D5D9400F148F3 /* Puzzles2023.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF3E12E42B1D5D9400F148F3 /* Puzzles2023.swift */; };
+		BF3E12F72B1D5E5300F148F3 /* Input1.txt in Resources */ = {isa = PBXBuildFile; fileRef = BF3E12EC2B1D5E5300F148F3 /* Input1.txt */; };
+		BF3E12F82B1D5E5300F148F3 /* Input1.txt in Resources */ = {isa = PBXBuildFile; fileRef = BF3E12EC2B1D5E5300F148F3 /* Input1.txt */; };
+		BF3E12F92B1D5E5300F148F3 /* Example1.txt in Resources */ = {isa = PBXBuildFile; fileRef = BF3E12ED2B1D5E5300F148F3 /* Example1.txt */; };
+		BF3E12FA2B1D5E5300F148F3 /* Example1.txt in Resources */ = {isa = PBXBuildFile; fileRef = BF3E12ED2B1D5E5300F148F3 /* Example1.txt */; };
+		BF3E12FB2B1D5E5300F148F3 /* Solve1.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF3E12EE2B1D5E5300F148F3 /* Solve1.swift */; };
+		BF3E12FC2B1D5E5300F148F3 /* Solve1.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF3E12EE2B1D5E5300F148F3 /* Solve1.swift */; };
+		BF3E12FD2B1D5E5300F148F3 /* Solve2.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF3E12F02B1D5E5300F148F3 /* Solve2.swift */; };
+		BF3E12FE2B1D5E5300F148F3 /* Solve2.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF3E12F02B1D5E5300F148F3 /* Solve2.swift */; };
+		BF3E12FF2B1D5E5300F148F3 /* Input2.txt in Resources */ = {isa = PBXBuildFile; fileRef = BF3E12F12B1D5E5300F148F3 /* Input2.txt */; };
+		BF3E13002B1D5E5300F148F3 /* Input2.txt in Resources */ = {isa = PBXBuildFile; fileRef = BF3E12F12B1D5E5300F148F3 /* Input2.txt */; };
+		BF3E13012B1D5E5300F148F3 /* Example2.txt in Resources */ = {isa = PBXBuildFile; fileRef = BF3E12F22B1D5E5300F148F3 /* Example2.txt */; };
+		BF3E13022B1D5E5300F148F3 /* Example2.txt in Resources */ = {isa = PBXBuildFile; fileRef = BF3E12F22B1D5E5300F148F3 /* Example2.txt */; };
+		BF3E13032B1D5E5300F148F3 /* Input3.txt in Resources */ = {isa = PBXBuildFile; fileRef = BF3E12F42B1D5E5300F148F3 /* Input3.txt */; };
+		BF3E13042B1D5E5300F148F3 /* Input3.txt in Resources */ = {isa = PBXBuildFile; fileRef = BF3E12F42B1D5E5300F148F3 /* Input3.txt */; };
+		BF3E13052B1D5E5300F148F3 /* Example3.txt in Resources */ = {isa = PBXBuildFile; fileRef = BF3E12F52B1D5E5300F148F3 /* Example3.txt */; };
+		BF3E13062B1D5E5300F148F3 /* Example3.txt in Resources */ = {isa = PBXBuildFile; fileRef = BF3E12F52B1D5E5300F148F3 /* Example3.txt */; };
+		BF3E13072B1D5E5300F148F3 /* Solve3.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF3E12F62B1D5E5300F148F3 /* Solve3.swift */; };
+		BF3E13082B1D5E5300F148F3 /* Solve3.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF3E12F62B1D5E5300F148F3 /* Solve3.swift */; };
+		BF3E130B2B1D5EA500F148F3 /* AOCLib in Frameworks */ = {isa = PBXBuildFile; productRef = BF3E130A2B1D5EA500F148F3 /* AOCLib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
 		BF3E12C82B1D5D5100F148F3 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BF3E12AF2B1D5D5000F148F3 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = BF3E12B62B1D5D5000F148F3;
-			remoteInfo = AOC2023;
-		};
-		BF3E12D22B1D5D5100F148F3 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BF3E12AF2B1D5D5000F148F3 /* Project object */;
 			proxyType = 1;
@@ -41,9 +52,16 @@
 		BF3E12C12B1D5D5100F148F3 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		BF3E12C72B1D5D5100F148F3 /* AOC2023Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AOC2023Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF3E12CB2B1D5D5100F148F3 /* AOC2023Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AOC2023Tests.swift; sourceTree = "<group>"; };
-		BF3E12D12B1D5D5100F148F3 /* AOC2023UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AOC2023UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		BF3E12D52B1D5D5100F148F3 /* AOC2023UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AOC2023UITests.swift; sourceTree = "<group>"; };
-		BF3E12D72B1D5D5100F148F3 /* AOC2023UITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AOC2023UITestsLaunchTests.swift; sourceTree = "<group>"; };
+		BF3E12E42B1D5D9400F148F3 /* Puzzles2023.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Puzzles2023.swift; sourceTree = "<group>"; };
+		BF3E12EC2B1D5E5300F148F3 /* Input1.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Input1.txt; sourceTree = "<group>"; };
+		BF3E12ED2B1D5E5300F148F3 /* Example1.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Example1.txt; sourceTree = "<group>"; };
+		BF3E12EE2B1D5E5300F148F3 /* Solve1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Solve1.swift; sourceTree = "<group>"; };
+		BF3E12F02B1D5E5300F148F3 /* Solve2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Solve2.swift; sourceTree = "<group>"; };
+		BF3E12F12B1D5E5300F148F3 /* Input2.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Input2.txt; sourceTree = "<group>"; };
+		BF3E12F22B1D5E5300F148F3 /* Example2.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Example2.txt; sourceTree = "<group>"; };
+		BF3E12F42B1D5E5300F148F3 /* Input3.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Input3.txt; sourceTree = "<group>"; };
+		BF3E12F52B1D5E5300F148F3 /* Example3.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Example3.txt; sourceTree = "<group>"; };
+		BF3E12F62B1D5E5300F148F3 /* Solve3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Solve3.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,17 +69,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF3E130B2B1D5EA500F148F3 /* AOCLib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		BF3E12C42B1D5D5100F148F3 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		BF3E12CE2B1D5D5100F148F3 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -76,7 +88,6 @@
 			children = (
 				BF3E12B92B1D5D5000F148F3 /* AOC2023 */,
 				BF3E12CA2B1D5D5100F148F3 /* AOC2023Tests */,
-				BF3E12D42B1D5D5100F148F3 /* AOC2023UITests */,
 				BF3E12B82B1D5D5000F148F3 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -86,7 +97,6 @@
 			children = (
 				BF3E12B72B1D5D5000F148F3 /* AOC2023.app */,
 				BF3E12C72B1D5D5100F148F3 /* AOC2023Tests.xctest */,
-				BF3E12D12B1D5D5100F148F3 /* AOC2023UITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -94,7 +104,9 @@
 		BF3E12B92B1D5D5000F148F3 /* AOC2023 */ = {
 			isa = PBXGroup;
 			children = (
+				BF3E12E62B1D5DE000F148F3 /* Puzzles */,
 				BF3E12BA2B1D5D5000F148F3 /* AOC2023App.swift */,
+				BF3E12E42B1D5D9400F148F3 /* Puzzles2023.swift */,
 				BF3E12BC2B1D5D5000F148F3 /* ContentView.swift */,
 				BF3E12BE2B1D5D5100F148F3 /* Assets.xcassets */,
 				BF3E12C02B1D5D5100F148F3 /* Preview Content */,
@@ -118,13 +130,44 @@
 			path = AOC2023Tests;
 			sourceTree = "<group>";
 		};
-		BF3E12D42B1D5D5100F148F3 /* AOC2023UITests */ = {
+		BF3E12E62B1D5DE000F148F3 /* Puzzles */ = {
 			isa = PBXGroup;
 			children = (
-				BF3E12D52B1D5D5100F148F3 /* AOC2023UITests.swift */,
-				BF3E12D72B1D5D5100F148F3 /* AOC2023UITestsLaunchTests.swift */,
+				BF3E12EB2B1D5E5300F148F3 /* 1 */,
+				BF3E12EF2B1D5E5300F148F3 /* 2 */,
+				BF3E12F32B1D5E5300F148F3 /* 3 */,
 			);
-			path = AOC2023UITests;
+			path = Puzzles;
+			sourceTree = "<group>";
+		};
+		BF3E12EB2B1D5E5300F148F3 /* 1 */ = {
+			isa = PBXGroup;
+			children = (
+				BF3E12EE2B1D5E5300F148F3 /* Solve1.swift */,
+				BF3E12EC2B1D5E5300F148F3 /* Input1.txt */,
+				BF3E12ED2B1D5E5300F148F3 /* Example1.txt */,
+			);
+			path = 1;
+			sourceTree = "<group>";
+		};
+		BF3E12EF2B1D5E5300F148F3 /* 2 */ = {
+			isa = PBXGroup;
+			children = (
+				BF3E12F02B1D5E5300F148F3 /* Solve2.swift */,
+				BF3E12F12B1D5E5300F148F3 /* Input2.txt */,
+				BF3E12F22B1D5E5300F148F3 /* Example2.txt */,
+			);
+			path = 2;
+			sourceTree = "<group>";
+		};
+		BF3E12F32B1D5E5300F148F3 /* 3 */ = {
+			isa = PBXGroup;
+			children = (
+				BF3E12F62B1D5E5300F148F3 /* Solve3.swift */,
+				BF3E12F42B1D5E5300F148F3 /* Input3.txt */,
+				BF3E12F52B1D5E5300F148F3 /* Example3.txt */,
+			);
+			path = 3;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -143,6 +186,9 @@
 			dependencies = (
 			);
 			name = AOC2023;
+			packageProductDependencies = (
+				BF3E130A2B1D5EA500F148F3 /* AOCLib */,
+			);
 			productName = AOC2023;
 			productReference = BF3E12B72B1D5D5000F148F3 /* AOC2023.app */;
 			productType = "com.apple.product-type.application";
@@ -165,24 +211,6 @@
 			productReference = BF3E12C72B1D5D5100F148F3 /* AOC2023Tests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		BF3E12D02B1D5D5100F148F3 /* AOC2023UITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = BF3E12E12B1D5D5100F148F3 /* Build configuration list for PBXNativeTarget "AOC2023UITests" */;
-			buildPhases = (
-				BF3E12CD2B1D5D5100F148F3 /* Sources */,
-				BF3E12CE2B1D5D5100F148F3 /* Frameworks */,
-				BF3E12CF2B1D5D5100F148F3 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				BF3E12D32B1D5D5100F148F3 /* PBXTargetDependency */,
-			);
-			name = AOC2023UITests;
-			productName = AOC2023UITests;
-			productReference = BF3E12D12B1D5D5100F148F3 /* AOC2023UITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -200,10 +228,6 @@
 						CreatedOnToolsVersion = 15.0;
 						TestTargetID = BF3E12B62B1D5D5000F148F3;
 					};
-					BF3E12D02B1D5D5100F148F3 = {
-						CreatedOnToolsVersion = 15.0;
-						TestTargetID = BF3E12B62B1D5D5000F148F3;
-					};
 				};
 			};
 			buildConfigurationList = BF3E12B22B1D5D5000F148F3 /* Build configuration list for PBXProject "AOC2023" */;
@@ -215,13 +239,15 @@
 				Base,
 			);
 			mainGroup = BF3E12AE2B1D5D5000F148F3;
+			packageReferences = (
+				BF3E13092B1D5EA500F148F3 /* XCRemoteSwiftPackageReference "AOCLib" */,
+			);
 			productRefGroup = BF3E12B82B1D5D5000F148F3 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				BF3E12B62B1D5D5000F148F3 /* AOC2023 */,
 				BF3E12C62B1D5D5100F148F3 /* AOC2023Tests */,
-				BF3E12D02B1D5D5100F148F3 /* AOC2023UITests */,
 			);
 		};
 /* End PBXProject section */
@@ -231,8 +257,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF3E13012B1D5E5300F148F3 /* Example2.txt in Resources */,
+				BF3E13052B1D5E5300F148F3 /* Example3.txt in Resources */,
 				BF3E12C22B1D5D5100F148F3 /* Preview Assets.xcassets in Resources */,
+				BF3E12F72B1D5E5300F148F3 /* Input1.txt in Resources */,
 				BF3E12BF2B1D5D5100F148F3 /* Assets.xcassets in Resources */,
+				BF3E12FF2B1D5E5300F148F3 /* Input2.txt in Resources */,
+				BF3E13032B1D5E5300F148F3 /* Input3.txt in Resources */,
+				BF3E12F92B1D5E5300F148F3 /* Example1.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -240,13 +272,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		BF3E12CF2B1D5D5100F148F3 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+				BF3E13022B1D5E5300F148F3 /* Example2.txt in Resources */,
+				BF3E13002B1D5E5300F148F3 /* Input2.txt in Resources */,
+				BF3E12F82B1D5E5300F148F3 /* Input1.txt in Resources */,
+				BF3E13062B1D5E5300F148F3 /* Example3.txt in Resources */,
+				BF3E13042B1D5E5300F148F3 /* Input3.txt in Resources */,
+				BF3E12FA2B1D5E5300F148F3 /* Example1.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -257,7 +288,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF3E12FB2B1D5E5300F148F3 /* Solve1.swift in Sources */,
 				BF3E12BD2B1D5D5000F148F3 /* ContentView.swift in Sources */,
+				BF3E12FD2B1D5E5300F148F3 /* Solve2.swift in Sources */,
+				BF3E12E52B1D5D9400F148F3 /* Puzzles2023.swift in Sources */,
+				BF3E13072B1D5E5300F148F3 /* Solve3.swift in Sources */,
 				BF3E12BB2B1D5D5000F148F3 /* AOC2023App.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -266,16 +301,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF3E13082B1D5E5300F148F3 /* Solve3.swift in Sources */,
 				BF3E12CC2B1D5D5100F148F3 /* AOC2023Tests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		BF3E12CD2B1D5D5100F148F3 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				BF3E12D62B1D5D5100F148F3 /* AOC2023UITests.swift in Sources */,
-				BF3E12D82B1D5D5100F148F3 /* AOC2023UITestsLaunchTests.swift in Sources */,
+				BF3E12FE2B1D5E5300F148F3 /* Solve2.swift in Sources */,
+				BF3E12FC2B1D5E5300F148F3 /* Solve1.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -286,11 +315,6 @@
 			isa = PBXTargetDependency;
 			target = BF3E12B62B1D5D5000F148F3 /* AOC2023 */;
 			targetProxy = BF3E12C82B1D5D5100F148F3 /* PBXContainerItemProxy */;
-		};
-		BF3E12D32B1D5D5100F148F3 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = BF3E12B62B1D5D5000F148F3 /* AOC2023 */;
-			targetProxy = BF3E12D22B1D5D5100F148F3 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -512,42 +536,6 @@
 			};
 			name = Release;
 		};
-		BF3E12E22B1D5D5100F148F3 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = WE3Z3S3MCF;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.pineo.aoc.AOC2023UITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = AOC2023;
-			};
-			name = Debug;
-		};
-		BF3E12E32B1D5D5100F148F3 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = WE3Z3S3MCF;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.pineo.aoc.AOC2023UITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = AOC2023;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -578,16 +566,26 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		BF3E12E12B1D5D5100F148F3 /* Build configuration list for PBXNativeTarget "AOC2023UITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				BF3E12E22B1D5D5100F148F3 /* Debug */,
-				BF3E12E32B1D5D5100F148F3 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		BF3E13092B1D5EA500F148F3 /* XCRemoteSwiftPackageReference "AOCLib" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/richardpineo/AOCLib.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		BF3E130A2B1D5EA500F148F3 /* AOCLib */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BF3E13092B1D5EA500F148F3 /* XCRemoteSwiftPackageReference "AOCLib" */;
+			productName = AOCLib;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = BF3E12AF2B1D5D5000F148F3 /* Project object */;
 }

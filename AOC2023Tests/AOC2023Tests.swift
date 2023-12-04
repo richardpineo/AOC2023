@@ -1,36 +1,53 @@
-//
-//  AOC2023Tests.swift
-//  AOC2023Tests
-//
-//  Created by Richard Pineo on 12/3/23.
-//
 
-import XCTest
 @testable import AOC2023
+import AOCLib
+import XCTest
 
-final class AOC2023Tests: XCTestCase {
+final class Test2022: XCTestCase {
+	func testOne() throws {
+		testOne(Solve15())
+	}
 
-    override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-    }
+	func testAll() throws {
+		let totalTime = Stopwatch()
 
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-    }
+		let puzzles = Puzzles2022()
 
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-        // Any test you write for XCTest can be annotated as throws and async.
-        // Mark your test throws to produce an unexpected failure when your test encounters an uncaught error.
-        // Mark your test async to allow awaiting for asynchronous code to complete. Check the results with assertions afterwards.
-    }
+		puzzles.puzzles.puzzles.forEach { puzzle in
+			print("Testing \(puzzle.id): \(puzzle.name)")
+			testOne(puzzle.solver)
+		}
 
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
-    }
+		print("⌚ Total time elapsed: \(totalTime.elapsed)")
+	}
 
+	func testOne(_ solver: PuzzleSolver) {
+		let totalTime = Stopwatch()
+
+		if solver.shouldTestExamplesA ?? true {
+			let stopwatch = Stopwatch()
+			XCTAssertTrue(solver.solveAExamples(), "🔴 Example A failed")
+			print("  ⌚ Examples A took \(stopwatch.elapsed)")
+		}
+		if solver.shouldTestExamplesB ?? true {
+			let stopwatch = Stopwatch()
+			XCTAssertTrue(solver.solveBExamples(), "🔴 Example B failed")
+			print("  ⌚ Examples B took \(stopwatch.elapsed)")
+		}
+
+		if solver.shouldTestA ?? true {
+			let stopwatch = Stopwatch()
+			let a = solver.solveA()
+			XCTAssertEqual(a, solver.answerA, "🔴 Part A failed. Expected: \(solver.answerA), Got: \(a)")
+			print("  ⌚ Part A took \(stopwatch.elapsed)")
+		}
+		if solver.shouldTestB ?? true {
+			let stopwatch = Stopwatch()
+			let b = solver.solveB()
+			XCTAssertEqual(b, solver.answerB, "🔴 Part B failed. Expected: \(solver.answerB), Got: \(b)")
+			print("  ⌚ Part B took \(stopwatch.elapsed)")
+		}
+
+		print("  ⌚ Total: \(totalTime.elapsed)")
+	}
 }

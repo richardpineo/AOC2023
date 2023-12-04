@@ -1,0 +1,14 @@
+{
+  "pins" : [
+    {
+      "identity" : "aoclib",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/richardpineo/AOCLib.git",
+      "state" : {
+        "branch" : "main",
+        "revision" : "418eb3d576033fed256f40b9abdc35f71d2aa900"
+      }
+    }
+  ],
+  "version" : 2
+}
