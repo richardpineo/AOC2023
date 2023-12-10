@@ -9,11 +9,11 @@ class Solve3: PuzzleSolver {
 	}
 
 	func solveBExamples() -> Bool {
-		solveB("Example3") == 0
+		solveB("Example3") == 467835
 	}
 
 	var answerA = "520135"
-	var answerB = "0"
+	var answerB = "72514855"
 
 	func solveA() -> String {
 		solveA("Input3").description
@@ -39,14 +39,23 @@ class Solve3: PuzzleSolver {
 			}
 			return Int(numberStr) ?? 0
 		}
+		
+		func gearRatio(gear: Gear) -> Int {
+			partNumber(part: gear.part1) * partNumber(part: gear.part2)
+		}
 	}
 
+	struct Gear {
+		var part1: Schematic.PossiblePart
+		var part2: Schematic.PossiblePart
+	}
+	 
 	func isSymbol(_ c: Character) -> Bool {
 		let symbols = "!@#$%^&*()-+/="
 		return symbols.contains(c)
 	}
 	
-	func findParts(schematic: Schematic) -> [Schematic.PossiblePart] {
+	func findValidParts(schematic: Schematic) -> [Schematic.PossiblePart] {
 		return schematic.possibleParts.filter { part in
 			var neighbors: Set<Position2D> = .init()
 			
@@ -69,7 +78,7 @@ class Solve3: PuzzleSolver {
 		let schematic = loadParts(fileName)
 
 		// Find all the parts that are adjacent to a symbol
-		let parts = findParts(schematic: schematic)
+		let parts = findValidParts(schematic: schematic)
 		
 		// Convert parts into numbers
 		let numbers = parts.compactMap {
@@ -77,6 +86,42 @@ class Solve3: PuzzleSolver {
 		}
 		
 		return numbers.reduce(0,+)
+	}
+
+	func findGears(schematic: Schematic) -> [Gear] {
+		let gearPositions = schematic.grid.allPositions.filter {
+			schematic.grid.value($0) == "*"
+		}
+		return gearPositions.compactMap { gearPos in
+			// Find neighboring parts
+			let neighboringParts = schematic.possibleParts.filter { part in
+				for x in part.posStart.x ... part.posEnd.x {
+					let neighboring = schematic.grid.neighbors(.init(x, part.posStart.y), includePos: false, includeDiagonals: true)
+					if neighboring.contains(gearPos) {
+						return true
+					}
+				}
+				return false
+			}
+			if neighboringParts.count != 2 {
+				return nil
+			}
+			return .init(part1: neighboringParts[0], part2: neighboringParts[1])
+		}
+	}
+	
+	func solveB(_ fileName: String) -> Int {
+		let schematic = loadParts(fileName)
+
+		// Find all the parts that are adjacent to a symbol
+		let gears = findGears(schematic: schematic)
+		
+		// Convert parts into ratios
+		let ratios = gears.map {
+			schematic.gearRatio(gear: $0)
+		}
+		
+		return ratios.reduce(0,+)
 	}
 
 	func loadParts(_ fileName: String) -> Schematic {
@@ -117,9 +162,5 @@ class Solve3: PuzzleSolver {
 		}
 
 		return .init(grid: grid, possibleParts: parts)
-	}
-
-	func solveB(_: String) -> Int {
-		0
 	}
 }
