@@ -32,6 +32,8 @@
 		BF3E13082B1D5E5300F148F3 /* Solve3.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF3E12F62B1D5E5300F148F3 /* Solve3.swift */; };
 		BF3E130B2B1D5EA500F148F3 /* AOCLib in Frameworks */ = {isa = PBXBuildFile; productRef = BF3E130A2B1D5EA500F148F3 /* AOCLib */; };
 		BF44DECA2B1D644A001964F7 /* Example1b.txt in Resources */ = {isa = PBXBuildFile; fileRef = BF44DEC92B1D644A001964F7 /* Example1b.txt */; };
+		BF9C00092B255862005111FB /* Example3b.txt in Resources */ = {isa = PBXBuildFile; fileRef = BF9C00082B255862005111FB /* Example3b.txt */; };
+		BF9C000A2B255862005111FB /* Example3b.txt in Resources */ = {isa = PBXBuildFile; fileRef = BF9C00082B255862005111FB /* Example3b.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +64,7 @@
 		BF3E12F52B1D5E5300F148F3 /* Example3.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Example3.txt; sourceTree = "<group>"; };
 		BF3E12F62B1D5E5300F148F3 /* Solve3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Solve3.swift; sourceTree = "<group>"; };
 		BF44DEC92B1D644A001964F7 /* Example1b.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = Example1b.txt; sourceTree = "<group>"; };
+		BF9C00082B255862005111FB /* Example3b.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Example3b.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -166,6 +169,7 @@
 				BF3E12F62B1D5E5300F148F3 /* Solve3.swift */,
 				BF3E12F42B1D5E5300F148F3 /* Input3.txt */,
 				BF3E12F52B1D5E5300F148F3 /* Example3.txt */,
+				BF9C00082B255862005111FB /* Example3b.txt */,
 			);
 			path = 3;
 			sourceTree = "<group>";
@@ -263,6 +267,7 @@
 				BF3E12F72B1D5E5300F148F3 /* Input1.txt in Resources */,
 				BF3E12BF2B1D5D5100F148F3 /* Assets.xcassets in Resources */,
 				BF3E12FF2B1D5E5300F148F3 /* Input2.txt in Resources */,
+				BF9C00092B255862005111FB /* Example3b.txt in Resources */,
 				BF44DECA2B1D644A001964F7 /* Example1b.txt in Resources */,
 				BF3E13032B1D5E5300F148F3 /* Input3.txt in Resources */,
 				BF3E12F92B1D5E5300F148F3 /* Example1.txt in Resources */,
@@ -279,6 +284,7 @@
 				BF3E13062B1D5E5300F148F3 /* Example3.txt in Resources */,
 				BF3E13042B1D5E5300F148F3 /* Input3.txt in Resources */,
 				BF3E12FA2B1D5E5300F148F3 /* Example1.txt in Resources */,
+				BF9C000A2B255862005111FB /* Example3b.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
