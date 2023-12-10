@@ -23,12 +23,16 @@ class Solve3: PuzzleSolver {
 		solveB("Input3").description
 	}
 
-	struct Schematic {
-		struct PossiblePart {
+	class Schematic {
+		struct PossiblePart: Hashable {
 			var posStart: Position2D
 			var posEnd: Position2D = .origin
 		}
-
+		
+		init(grid: Grid2D, possibleParts: [PossiblePart]) {
+			self.grid = grid
+			self.possibleParts = possibleParts
+		}
 		var grid: Grid2D
 		var possibleParts: [PossiblePart]
 		
@@ -43,6 +47,23 @@ class Solve3: PuzzleSolver {
 		func gearRatio(gear: Gear) -> Int {
 			partNumber(part: gear.part1) * partNumber(part: gear.part2)
 		}
+		
+		func neighboringPart(part: PossiblePart) -> [Position2D] {
+			if let found = cachedNeighbors[part] {
+				return found
+			}
+			var neighbors: Set<Position2D> = .init()
+			for x in part.posStart.x ... part.posEnd.x {
+				let posNeighbors = grid.neighbors(.init(x, part.posStart.y), includePos: false, includeDiagonals: true)
+				posNeighbors.forEach {
+					neighbors.insert($0)
+				}
+			}
+			let answer = Array(neighbors)
+			cachedNeighbors[part] = answer
+			return answer
+		}
+		private var cachedNeighbors: [PossiblePart: [Position2D]] = .init()
 	}
 
 	struct Gear {
@@ -57,15 +78,7 @@ class Solve3: PuzzleSolver {
 	
 	func findValidParts(schematic: Schematic) -> [Schematic.PossiblePart] {
 		return schematic.possibleParts.filter { part in
-			var neighbors: Set<Position2D> = .init()
-			
-			for x in part.posStart.x ... part.posEnd.x {
-				let posNeighbors = schematic.grid.neighbors(.init(x, part.posStart.y), includePos: false, includeDiagonals: true)
-				posNeighbors.forEach {
-					neighbors.insert($0)
-				}
-			}
-			
+			let neighbors = schematic.neighboringPart(part: part)
 			let isPart = neighbors.first {
 				isSymbol(schematic.grid.value($0))
 			} != nil
@@ -95,13 +108,7 @@ class Solve3: PuzzleSolver {
 		return gearPositions.compactMap { gearPos in
 			// Find neighboring parts
 			let neighboringParts = schematic.possibleParts.filter { part in
-				for x in part.posStart.x ... part.posEnd.x {
-					let neighboring = schematic.grid.neighbors(.init(x, part.posStart.y), includePos: false, includeDiagonals: true)
-					if neighboring.contains(gearPos) {
-						return true
-					}
-				}
-				return false
+				return schematic.neighboringPart(part: part).contains(gearPos)
 			}
 			if neighboringParts.count != 2 {
 				return nil
