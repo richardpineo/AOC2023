@@ -11,8 +11,8 @@ class Solve12: PuzzleSolver {
 		solveB("Example12") == 0
 	}
 
-	var answerA = ""
-	var answerB = ""
+	var answerA = "0"
+	var answerB = "0"
 
 	func solveA() -> String {
 		solveA("Input12").description
