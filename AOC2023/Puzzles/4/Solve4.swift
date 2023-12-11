@@ -12,7 +12,7 @@ class Solve4: PuzzleSolver {
 	}
 
 	var answerA = "26346"
-	var answerB = ""
+	var answerB = "8467762"
 
 	func solveA() -> String {
 		solveA("Input4").description
@@ -87,9 +87,4 @@ class Solve4: PuzzleSolver {
 		}
 	}
 }
-/*
-let colonPos = line.distance(from: line.startIndex, to: colonIndex)
-let gameNum = line.subString(start: 5, count: colonPos - 5)
-let subSets = line.subString(start: colonPos + 1, count: line.count - colonPos - 1).split(separator: ";").map { String($0).trimmingCharacters(in: .whitespaces) }
-return .init(game: Int(gameNum)!, subsets: subSets.map { parseSubset(subset: $0) })
-*/
+

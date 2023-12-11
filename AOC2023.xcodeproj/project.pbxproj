@@ -40,6 +40,132 @@
 		BF9C00122B268570005111FB /* Solve4.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9C000D2B268570005111FB /* Solve4.swift */; };
 		BF9C00132B268570005111FB /* Input4.txt in Resources */ = {isa = PBXBuildFile; fileRef = BF9C000E2B268570005111FB /* Input4.txt */; };
 		BF9C00142B268570005111FB /* Input4.txt in Resources */ = {isa = PBXBuildFile; fileRef = BF9C000E2B268570005111FB /* Input4.txt */; };
+		BF9C00192B268E10005111FB /* Example5.txt in Resources */ = {isa = PBXBuildFile; fileRef = BF9C00162B268E10005111FB /* Example5.txt */; };
+		BF9C001A2B268E10005111FB /* Example5.txt in Resources */ = {isa = PBXBuildFile; fileRef = BF9C00162B268E10005111FB /* Example5.txt */; };
+		BF9C001B2B268E10005111FB /* Input5.txt in Resources */ = {isa = PBXBuildFile; fileRef = BF9C00172B268E10005111FB /* Input5.txt */; };
+		BF9C001C2B268E10005111FB /* Input5.txt in Resources */ = {isa = PBXBuildFile; fileRef = BF9C00172B268E10005111FB /* Input5.txt */; };
+		BF9C001D2B268E10005111FB /* Solve5.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9C00182B268E10005111FB /* Solve5.swift */; };
+		BF9C001E2B268E10005111FB /* Solve5.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9C00182B268E10005111FB /* Solve5.swift */; };
+		BF9C006F2B268FC3005111FB /* Example13.txt in Resources */ = {isa = PBXBuildFile; fileRef = BF9C00202B268FC3005111FB /* Example13.txt */; };
+		BF9C00702B268FC3005111FB /* Example13.txt in Resources */ = {isa = PBXBuildFile; fileRef = BF9C00202B268FC3005111FB /* Example13.txt */; };
+		BF9C00712B268FC3005111FB /* Solve13.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9C00212B268FC3005111FB /* Solve13.swift */; };
+		BF9C00722B268FC3005111FB /* Solve13.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9C00212B268FC3005111FB /* Solve13.swift */; };
+		BF9C00732B268FC3005111FB /* Input13.txt in Resources */ = {isa = PBXBuildFile; fileRef = BF9C00222B268FC3005111FB /* Input13.txt */; };
+		BF9C00742B268FC3005111FB /* Input13.txt in Resources */ = {isa = PBXBuildFile; fileRef = BF9C00222B268FC3005111FB /* Input13.txt */; };
+		BF9C00752B268FC3005111FB /* Input20.txt in Resources */ = {isa = PBXBuildFile; fileRef = BF9C00242B268FC3005111FB /* Input20.txt */; };
+		BF9C00762B268FC3005111FB /* Input20.txt in Resources */ = {isa = PBXBuildFile; fileRef = BF9C00242B268FC3005111FB /* Input20.txt */; };
+		BF9C00772B268FC3005111FB /* Solve20.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9C00252B268FC3005111FB /* Solve20.swift */; };
+		BF9C00782B268FC3005111FB /* Solve20.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9C00252B268FC3005111FB /* Solve20.swift */; };
+		BF9C00792B268FC3005111FB /* Example20.txt in Resources */ = {isa = PBXBuildFile; fileRef = BF9C00262B268FC3005111FB /* Example20.txt */; };
+		BF9C007A2B268FC3005111FB /* Example20.txt in Resources */ = {isa = PBXBuildFile; fileRef = BF9C00262B268FC3005111FB /* Example20.txt */; };
+		BF9C007B2B268FC3005111FB /* Input22.txt in Resources */ = {isa = PBXBuildFile; fileRef = BF9C00282B268FC3005111FB /* Input22.txt */; };
+		BF9C007C2B268FC3005111FB /* Input22.txt in Resources */ = {isa = PBXBuildFile; fileRef = BF9C00282B268FC3005111FB /* Input22.txt */; };
+		BF9C007D2B268FC3005111FB /* Example22.txt in Resources */ = {isa = PBXBuildFile; fileRef = BF9C00292B268FC3005111FB /* Example22.txt */; };
+		BF9C007E2B268FC3005111FB /* Example22.txt in Resources */ = {isa = PBXBuildFile; fileRef = BF9C00292B268FC3005111FB /* Example22.txt */; };
+		BF9C007F2B268FC3005111FB /* Solve22.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9C002A2B268FC3005111FB /* Solve22.swift */; };
+		BF9C00802B268FC3005111FB /* Solve22.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9C002A2B268FC3005111FB /* Solve22.swift */; };
+		BF9C00812B268FC3005111FB /* Input19.txt in Resources */ = {isa = PBXBuildFile; fileRef = BF9C002C2B268FC3005111FB /* Input19.txt */; };
+		BF9C00822B268FC3005111FB /* Input19.txt in Resources */ = {isa = PBXBuildFile; fileRef = BF9C002C2B268FC3005111FB /* Input19.txt */; };
+		BF9C00832B268FC3005111FB /* Solve19.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9C002D2B268FC3005111FB /* Solve19.swift */; };
+		BF9C00842B268FC3005111FB /* Solve19.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9C002D2B268FC3005111FB /* Solve19.swift */; };
+		BF9C00852B268FC3005111FB /* Example19.txt in Resources */ = {isa = PBXBuildFile; fileRef = BF9C002E2B268FC3005111FB /* Example19.txt */; };
+		BF9C00862B268FC3005111FB /* Example19.txt in Resources */ = {isa = PBXBuildFile; fileRef = BF9C002E2B268FC3005111FB /* Example19.txt */; };
+		BF9C00872B268FC3005111FB /* Input24.txt in Resources */ = {isa = PBXBuildFile; fileRef = BF9C00302B268FC3005111FB /* Input24.txt */; };
+		BF9C00882B268FC3005111FB /* Input24.txt in Resources */ = {isa = PBXBuildFile; fileRef = BF9C00302B268FC3005111FB /* Input24.txt */; };
+		BF9C00892B268FC3005111FB /* Solve24.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9C00312B268FC3005111FB /* Solve24.swift */; };
+		BF9C008A2B268FC3005111FB /* Solve24.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9C00312B268FC3005111FB /* Solve24.swift */; };
+		BF9C008B2B268FC3005111FB /* Example24.txt in Resources */ = {isa = PBXBuildFile; fileRef = BF9C00322B268FC3005111FB /* Example24.txt */; };
+		BF9C008C2B268FC3005111FB /* Example24.txt in Resources */ = {isa = PBXBuildFile; fileRef = BF9C00322B268FC3005111FB /* Example24.txt */; };
+		BF9C008D2B268FC3005111FB /* Input23.txt in Resources */ = {isa = PBXBuildFile; fileRef = BF9C00342B268FC3005111FB /* Input23.txt */; };
+		BF9C008E2B268FC3005111FB /* Input23.txt in Resources */ = {isa = PBXBuildFile; fileRef = BF9C00342B268FC3005111FB /* Input23.txt */; };
+		BF9C008F2B268FC3005111FB /* Solve23.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9C00352B268FC3005111FB /* Solve23.swift */; };
+		BF9C00902B268FC3005111FB /* Solve23.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9C00352B268FC3005111FB /* Solve23.swift */; };
+		BF9C00912B268FC3005111FB /* Example23.txt in Resources */ = {isa = PBXBuildFile; fileRef = BF9C00362B268FC3005111FB /* Example23.txt */; };
+		BF9C00922B268FC3005111FB /* Example23.txt in Resources */ = {isa = PBXBuildFile; fileRef = BF9C00362B268FC3005111FB /* Example23.txt */; };
+		BF9C00932B268FC3005111FB /* Input21.txt in Resources */ = {isa = PBXBuildFile; fileRef = BF9C00382B268FC3005111FB /* Input21.txt */; };
+		BF9C00942B268FC3005111FB /* Input21.txt in Resources */ = {isa = PBXBuildFile; fileRef = BF9C00382B268FC3005111FB /* Input21.txt */; };
+		BF9C00952B268FC3005111FB /* Solve21.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9C00392B268FC3005111FB /* Solve21.swift */; };
+		BF9C00962B268FC3005111FB /* Solve21.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9C00392B268FC3005111FB /* Solve21.swift */; };
+		BF9C00972B268FC3005111FB /* Example21.txt in Resources */ = {isa = PBXBuildFile; fileRef = BF9C003A2B268FC3005111FB /* Example21.txt */; };
+		BF9C00982B268FC3005111FB /* Example21.txt in Resources */ = {isa = PBXBuildFile; fileRef = BF9C003A2B268FC3005111FB /* Example21.txt */; };
+		BF9C00992B268FC3005111FB /* Input25.txt in Resources */ = {isa = PBXBuildFile; fileRef = BF9C003C2B268FC3005111FB /* Input25.txt */; };
+		BF9C009A2B268FC3005111FB /* Input25.txt in Resources */ = {isa = PBXBuildFile; fileRef = BF9C003C2B268FC3005111FB /* Input25.txt */; };
+		BF9C009B2B268FC3005111FB /* Solve25.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9C003D2B268FC3005111FB /* Solve25.swift */; };
+		BF9C009C2B268FC3005111FB /* Solve25.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9C003D2B268FC3005111FB /* Solve25.swift */; };
+		BF9C009D2B268FC3005111FB /* Example25.txt in Resources */ = {isa = PBXBuildFile; fileRef = BF9C003E2B268FC3005111FB /* Example25.txt */; };
+		BF9C009E2B268FC3005111FB /* Example25.txt in Resources */ = {isa = PBXBuildFile; fileRef = BF9C003E2B268FC3005111FB /* Example25.txt */; };
+		BF9C009F2B268FC3005111FB /* Solve11.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9C00402B268FC3005111FB /* Solve11.swift */; };
+		BF9C00A02B268FC3005111FB /* Solve11.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9C00402B268FC3005111FB /* Solve11.swift */; };
+		BF9C00A12B268FC3005111FB /* Example11.txt in Resources */ = {isa = PBXBuildFile; fileRef = BF9C00412B268FC3005111FB /* Example11.txt */; };
+		BF9C00A22B268FC3005111FB /* Example11.txt in Resources */ = {isa = PBXBuildFile; fileRef = BF9C00412B268FC3005111FB /* Example11.txt */; };
+		BF9C00A32B268FC3005111FB /* Input11.txt in Resources */ = {isa = PBXBuildFile; fileRef = BF9C00422B268FC3005111FB /* Input11.txt */; };
+		BF9C00A42B268FC3005111FB /* Input11.txt in Resources */ = {isa = PBXBuildFile; fileRef = BF9C00422B268FC3005111FB /* Input11.txt */; };
+		BF9C00A52B268FC3005111FB /* Example16.txt in Resources */ = {isa = PBXBuildFile; fileRef = BF9C00442B268FC3005111FB /* Example16.txt */; };
+		BF9C00A62B268FC3005111FB /* Example16.txt in Resources */ = {isa = PBXBuildFile; fileRef = BF9C00442B268FC3005111FB /* Example16.txt */; };
+		BF9C00A72B268FC3005111FB /* Solve16.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9C00452B268FC3005111FB /* Solve16.swift */; };
+		BF9C00A82B268FC3005111FB /* Solve16.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9C00452B268FC3005111FB /* Solve16.swift */; };
+		BF9C00A92B268FC3005111FB /* Input16.txt in Resources */ = {isa = PBXBuildFile; fileRef = BF9C00462B268FC3005111FB /* Input16.txt */; };
+		BF9C00AA2B268FC3005111FB /* Input16.txt in Resources */ = {isa = PBXBuildFile; fileRef = BF9C00462B268FC3005111FB /* Input16.txt */; };
+		BF9C00AB2B268FC3005111FB /* Input8.txt in Resources */ = {isa = PBXBuildFile; fileRef = BF9C00482B268FC3005111FB /* Input8.txt */; };
+		BF9C00AC2B268FC3005111FB /* Input8.txt in Resources */ = {isa = PBXBuildFile; fileRef = BF9C00482B268FC3005111FB /* Input8.txt */; };
+		BF9C00AD2B268FC3005111FB /* Solve8.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9C00492B268FC3005111FB /* Solve8.swift */; };
+		BF9C00AE2B268FC3005111FB /* Solve8.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9C00492B268FC3005111FB /* Solve8.swift */; };
+		BF9C00AF2B268FC3005111FB /* Example8.txt in Resources */ = {isa = PBXBuildFile; fileRef = BF9C004A2B268FC3005111FB /* Example8.txt */; };
+		BF9C00B02B268FC3005111FB /* Example8.txt in Resources */ = {isa = PBXBuildFile; fileRef = BF9C004A2B268FC3005111FB /* Example8.txt */; };
+		BF9C00B12B268FC3005111FB /* Solve9.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9C004C2B268FC3005111FB /* Solve9.swift */; };
+		BF9C00B22B268FC3005111FB /* Solve9.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9C004C2B268FC3005111FB /* Solve9.swift */; };
+		BF9C00B32B268FC3005111FB /* Input9.txt in Resources */ = {isa = PBXBuildFile; fileRef = BF9C004D2B268FC3005111FB /* Input9.txt */; };
+		BF9C00B42B268FC3005111FB /* Input9.txt in Resources */ = {isa = PBXBuildFile; fileRef = BF9C004D2B268FC3005111FB /* Input9.txt */; };
+		BF9C00B52B268FC3005111FB /* Example9.txt in Resources */ = {isa = PBXBuildFile; fileRef = BF9C004E2B268FC3005111FB /* Example9.txt */; };
+		BF9C00B62B268FC3005111FB /* Example9.txt in Resources */ = {isa = PBXBuildFile; fileRef = BF9C004E2B268FC3005111FB /* Example9.txt */; };
+		BF9C00B72B268FC3005111FB /* Input18.txt in Resources */ = {isa = PBXBuildFile; fileRef = BF9C00502B268FC3005111FB /* Input18.txt */; };
+		BF9C00B82B268FC3005111FB /* Input18.txt in Resources */ = {isa = PBXBuildFile; fileRef = BF9C00502B268FC3005111FB /* Input18.txt */; };
+		BF9C00B92B268FC3005111FB /* Solve18.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9C00512B268FC3005111FB /* Solve18.swift */; };
+		BF9C00BA2B268FC3005111FB /* Solve18.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9C00512B268FC3005111FB /* Solve18.swift */; };
+		BF9C00BB2B268FC3005111FB /* Example18.txt in Resources */ = {isa = PBXBuildFile; fileRef = BF9C00522B268FC3005111FB /* Example18.txt */; };
+		BF9C00BC2B268FC3005111FB /* Example18.txt in Resources */ = {isa = PBXBuildFile; fileRef = BF9C00522B268FC3005111FB /* Example18.txt */; };
+		BF9C00BD2B268FC3005111FB /* Solve15.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9C00542B268FC3005111FB /* Solve15.swift */; };
+		BF9C00BE2B268FC3005111FB /* Solve15.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9C00542B268FC3005111FB /* Solve15.swift */; };
+		BF9C00BF2B268FC3005111FB /* Example15.txt in Resources */ = {isa = PBXBuildFile; fileRef = BF9C00552B268FC3005111FB /* Example15.txt */; };
+		BF9C00C02B268FC3005111FB /* Example15.txt in Resources */ = {isa = PBXBuildFile; fileRef = BF9C00552B268FC3005111FB /* Example15.txt */; };
+		BF9C00C12B268FC3005111FB /* Input15.txt in Resources */ = {isa = PBXBuildFile; fileRef = BF9C00562B268FC3005111FB /* Input15.txt */; };
+		BF9C00C22B268FC3005111FB /* Input15.txt in Resources */ = {isa = PBXBuildFile; fileRef = BF9C00562B268FC3005111FB /* Input15.txt */; };
+		BF9C00C32B268FC3005111FB /* Example12.txt in Resources */ = {isa = PBXBuildFile; fileRef = BF9C00582B268FC3005111FB /* Example12.txt */; };
+		BF9C00C42B268FC3005111FB /* Example12.txt in Resources */ = {isa = PBXBuildFile; fileRef = BF9C00582B268FC3005111FB /* Example12.txt */; };
+		BF9C00C52B268FC3005111FB /* Solve12.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9C00592B268FC3005111FB /* Solve12.swift */; };
+		BF9C00C62B268FC3005111FB /* Solve12.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9C00592B268FC3005111FB /* Solve12.swift */; };
+		BF9C00C72B268FC3005111FB /* Input12.txt in Resources */ = {isa = PBXBuildFile; fileRef = BF9C005A2B268FC3005111FB /* Input12.txt */; };
+		BF9C00C82B268FC3005111FB /* Input12.txt in Resources */ = {isa = PBXBuildFile; fileRef = BF9C005A2B268FC3005111FB /* Input12.txt */; };
+		BF9C00C92B268FC3005111FB /* Example7.txt in Resources */ = {isa = PBXBuildFile; fileRef = BF9C005C2B268FC3005111FB /* Example7.txt */; };
+		BF9C00CA2B268FC3005111FB /* Example7.txt in Resources */ = {isa = PBXBuildFile; fileRef = BF9C005C2B268FC3005111FB /* Example7.txt */; };
+		BF9C00CB2B268FC3005111FB /* Input7.txt in Resources */ = {isa = PBXBuildFile; fileRef = BF9C005D2B268FC3005111FB /* Input7.txt */; };
+		BF9C00CC2B268FC3005111FB /* Input7.txt in Resources */ = {isa = PBXBuildFile; fileRef = BF9C005D2B268FC3005111FB /* Input7.txt */; };
+		BF9C00CD2B268FC3005111FB /* Solve7.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9C005E2B268FC3005111FB /* Solve7.swift */; };
+		BF9C00CE2B268FC3005111FB /* Solve7.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9C005E2B268FC3005111FB /* Solve7.swift */; };
+		BF9C00CF2B268FC3005111FB /* Example6.txt in Resources */ = {isa = PBXBuildFile; fileRef = BF9C00602B268FC3005111FB /* Example6.txt */; };
+		BF9C00D02B268FC3005111FB /* Example6.txt in Resources */ = {isa = PBXBuildFile; fileRef = BF9C00602B268FC3005111FB /* Example6.txt */; };
+		BF9C00D12B268FC3005111FB /* Input6.txt in Resources */ = {isa = PBXBuildFile; fileRef = BF9C00612B268FC3005111FB /* Input6.txt */; };
+		BF9C00D22B268FC3005111FB /* Input6.txt in Resources */ = {isa = PBXBuildFile; fileRef = BF9C00612B268FC3005111FB /* Input6.txt */; };
+		BF9C00D32B268FC3005111FB /* Solve6.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9C00622B268FC3005111FB /* Solve6.swift */; };
+		BF9C00D42B268FC3005111FB /* Solve6.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9C00622B268FC3005111FB /* Solve6.swift */; };
+		BF9C00D52B268FC3005111FB /* Example14.txt in Resources */ = {isa = PBXBuildFile; fileRef = BF9C00642B268FC3005111FB /* Example14.txt */; };
+		BF9C00D62B268FC3005111FB /* Example14.txt in Resources */ = {isa = PBXBuildFile; fileRef = BF9C00642B268FC3005111FB /* Example14.txt */; };
+		BF9C00D72B268FC3005111FB /* Solve14.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9C00652B268FC3005111FB /* Solve14.swift */; };
+		BF9C00D82B268FC3005111FB /* Solve14.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9C00652B268FC3005111FB /* Solve14.swift */; };
+		BF9C00D92B268FC3005111FB /* Input14.txt in Resources */ = {isa = PBXBuildFile; fileRef = BF9C00662B268FC3005111FB /* Input14.txt */; };
+		BF9C00DA2B268FC3005111FB /* Input14.txt in Resources */ = {isa = PBXBuildFile; fileRef = BF9C00662B268FC3005111FB /* Input14.txt */; };
+		BF9C00DB2B268FC3005111FB /* Example10.txt in Resources */ = {isa = PBXBuildFile; fileRef = BF9C00682B268FC3005111FB /* Example10.txt */; };
+		BF9C00DC2B268FC3005111FB /* Example10.txt in Resources */ = {isa = PBXBuildFile; fileRef = BF9C00682B268FC3005111FB /* Example10.txt */; };
+		BF9C00DD2B268FC3005111FB /* Solve10.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9C00692B268FC3005111FB /* Solve10.swift */; };
+		BF9C00DE2B268FC3005111FB /* Solve10.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9C00692B268FC3005111FB /* Solve10.swift */; };
+		BF9C00DF2B268FC3005111FB /* Input10.txt in Resources */ = {isa = PBXBuildFile; fileRef = BF9C006A2B268FC3005111FB /* Input10.txt */; };
+		BF9C00E02B268FC3005111FB /* Input10.txt in Resources */ = {isa = PBXBuildFile; fileRef = BF9C006A2B268FC3005111FB /* Input10.txt */; };
+		BF9C00E12B268FC3005111FB /* Example17.txt in Resources */ = {isa = PBXBuildFile; fileRef = BF9C006C2B268FC3005111FB /* Example17.txt */; };
+		BF9C00E22B268FC3005111FB /* Example17.txt in Resources */ = {isa = PBXBuildFile; fileRef = BF9C006C2B268FC3005111FB /* Example17.txt */; };
+		BF9C00E32B268FC3005111FB /* Solve17.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9C006D2B268FC3005111FB /* Solve17.swift */; };
+		BF9C00E42B268FC3005111FB /* Solve17.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9C006D2B268FC3005111FB /* Solve17.swift */; };
+		BF9C00E52B268FC3005111FB /* Input17.txt in Resources */ = {isa = PBXBuildFile; fileRef = BF9C006E2B268FC3005111FB /* Input17.txt */; };
+		BF9C00E62B268FC3005111FB /* Input17.txt in Resources */ = {isa = PBXBuildFile; fileRef = BF9C006E2B268FC3005111FB /* Input17.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,6 +200,69 @@
 		BF9C000C2B268570005111FB /* Example4.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Example4.txt; sourceTree = "<group>"; };
 		BF9C000D2B268570005111FB /* Solve4.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Solve4.swift; sourceTree = "<group>"; };
 		BF9C000E2B268570005111FB /* Input4.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Input4.txt; sourceTree = "<group>"; };
+		BF9C00162B268E10005111FB /* Example5.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Example5.txt; sourceTree = "<group>"; };
+		BF9C00172B268E10005111FB /* Input5.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Input5.txt; sourceTree = "<group>"; };
+		BF9C00182B268E10005111FB /* Solve5.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Solve5.swift; sourceTree = "<group>"; };
+		BF9C00202B268FC3005111FB /* Example13.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Example13.txt; sourceTree = "<group>"; };
+		BF9C00212B268FC3005111FB /* Solve13.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Solve13.swift; sourceTree = "<group>"; };
+		BF9C00222B268FC3005111FB /* Input13.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Input13.txt; sourceTree = "<group>"; };
+		BF9C00242B268FC3005111FB /* Input20.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Input20.txt; sourceTree = "<group>"; };
+		BF9C00252B268FC3005111FB /* Solve20.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Solve20.swift; sourceTree = "<group>"; };
+		BF9C00262B268FC3005111FB /* Example20.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Example20.txt; sourceTree = "<group>"; };
+		BF9C00282B268FC3005111FB /* Input22.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Input22.txt; sourceTree = "<group>"; };
+		BF9C00292B268FC3005111FB /* Example22.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Example22.txt; sourceTree = "<group>"; };
+		BF9C002A2B268FC3005111FB /* Solve22.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Solve22.swift; sourceTree = "<group>"; };
+		BF9C002C2B268FC3005111FB /* Input19.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Input19.txt; sourceTree = "<group>"; };
+		BF9C002D2B268FC3005111FB /* Solve19.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Solve19.swift; sourceTree = "<group>"; };
+		BF9C002E2B268FC3005111FB /* Example19.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Example19.txt; sourceTree = "<group>"; };
+		BF9C00302B268FC3005111FB /* Input24.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Input24.txt; sourceTree = "<group>"; };
+		BF9C00312B268FC3005111FB /* Solve24.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Solve24.swift; sourceTree = "<group>"; };
+		BF9C00322B268FC3005111FB /* Example24.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Example24.txt; sourceTree = "<group>"; };
+		BF9C00342B268FC3005111FB /* Input23.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Input23.txt; sourceTree = "<group>"; };
+		BF9C00352B268FC3005111FB /* Solve23.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Solve23.swift; sourceTree = "<group>"; };
+		BF9C00362B268FC3005111FB /* Example23.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Example23.txt; sourceTree = "<group>"; };
+		BF9C00382B268FC3005111FB /* Input21.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Input21.txt; sourceTree = "<group>"; };
+		BF9C00392B268FC3005111FB /* Solve21.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Solve21.swift; sourceTree = "<group>"; };
+		BF9C003A2B268FC3005111FB /* Example21.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Example21.txt; sourceTree = "<group>"; };
+		BF9C003C2B268FC3005111FB /* Input25.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Input25.txt; sourceTree = "<group>"; };
+		BF9C003D2B268FC3005111FB /* Solve25.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Solve25.swift; sourceTree = "<group>"; };
+		BF9C003E2B268FC3005111FB /* Example25.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Example25.txt; sourceTree = "<group>"; };
+		BF9C00402B268FC3005111FB /* Solve11.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Solve11.swift; sourceTree = "<group>"; };
+		BF9C00412B268FC3005111FB /* Example11.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Example11.txt; sourceTree = "<group>"; };
+		BF9C00422B268FC3005111FB /* Input11.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Input11.txt; sourceTree = "<group>"; };
+		BF9C00442B268FC3005111FB /* Example16.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Example16.txt; sourceTree = "<group>"; };
+		BF9C00452B268FC3005111FB /* Solve16.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Solve16.swift; sourceTree = "<group>"; };
+		BF9C00462B268FC3005111FB /* Input16.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Input16.txt; sourceTree = "<group>"; };
+		BF9C00482B268FC3005111FB /* Input8.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Input8.txt; sourceTree = "<group>"; };
+		BF9C00492B268FC3005111FB /* Solve8.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Solve8.swift; sourceTree = "<group>"; };
+		BF9C004A2B268FC3005111FB /* Example8.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Example8.txt; sourceTree = "<group>"; };
+		BF9C004C2B268FC3005111FB /* Solve9.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Solve9.swift; sourceTree = "<group>"; };
+		BF9C004D2B268FC3005111FB /* Input9.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Input9.txt; sourceTree = "<group>"; };
+		BF9C004E2B268FC3005111FB /* Example9.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Example9.txt; sourceTree = "<group>"; };
+		BF9C00502B268FC3005111FB /* Input18.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Input18.txt; sourceTree = "<group>"; };
+		BF9C00512B268FC3005111FB /* Solve18.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Solve18.swift; sourceTree = "<group>"; };
+		BF9C00522B268FC3005111FB /* Example18.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Example18.txt; sourceTree = "<group>"; };
+		BF9C00542B268FC3005111FB /* Solve15.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Solve15.swift; sourceTree = "<group>"; };
+		BF9C00552B268FC3005111FB /* Example15.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Example15.txt; sourceTree = "<group>"; };
+		BF9C00562B268FC3005111FB /* Input15.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Input15.txt; sourceTree = "<group>"; };
+		BF9C00582B268FC3005111FB /* Example12.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Example12.txt; sourceTree = "<group>"; };
+		BF9C00592B268FC3005111FB /* Solve12.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Solve12.swift; sourceTree = "<group>"; };
+		BF9C005A2B268FC3005111FB /* Input12.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Input12.txt; sourceTree = "<group>"; };
+		BF9C005C2B268FC3005111FB /* Example7.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Example7.txt; sourceTree = "<group>"; };
+		BF9C005D2B268FC3005111FB /* Input7.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Input7.txt; sourceTree = "<group>"; };
+		BF9C005E2B268FC3005111FB /* Solve7.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Solve7.swift; sourceTree = "<group>"; };
+		BF9C00602B268FC3005111FB /* Example6.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Example6.txt; sourceTree = "<group>"; };
+		BF9C00612B268FC3005111FB /* Input6.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Input6.txt; sourceTree = "<group>"; };
+		BF9C00622B268FC3005111FB /* Solve6.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Solve6.swift; sourceTree = "<group>"; };
+		BF9C00642B268FC3005111FB /* Example14.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Example14.txt; sourceTree = "<group>"; };
+		BF9C00652B268FC3005111FB /* Solve14.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Solve14.swift; sourceTree = "<group>"; };
+		BF9C00662B268FC3005111FB /* Input14.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Input14.txt; sourceTree = "<group>"; };
+		BF9C00682B268FC3005111FB /* Example10.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Example10.txt; sourceTree = "<group>"; };
+		BF9C00692B268FC3005111FB /* Solve10.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Solve10.swift; sourceTree = "<group>"; };
+		BF9C006A2B268FC3005111FB /* Input10.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Input10.txt; sourceTree = "<group>"; };
+		BF9C006C2B268FC3005111FB /* Example17.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Example17.txt; sourceTree = "<group>"; };
+		BF9C006D2B268FC3005111FB /* Solve17.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Solve17.swift; sourceTree = "<group>"; };
+		BF9C006E2B268FC3005111FB /* Input17.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Input17.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,6 +337,27 @@
 				BF3E12EF2B1D5E5300F148F3 /* 2 */,
 				BF3E12F32B1D5E5300F148F3 /* 3 */,
 				BF9C000B2B268570005111FB /* 4 */,
+				BF9C00152B268E10005111FB /* 5 */,
+				BF9C005F2B268FC3005111FB /* 6 */,
+				BF9C005B2B268FC3005111FB /* 7 */,
+				BF9C00472B268FC3005111FB /* 8 */,
+				BF9C004B2B268FC3005111FB /* 9 */,
+				BF9C00672B268FC3005111FB /* 10 */,
+				BF9C003F2B268FC3005111FB /* 11 */,
+				BF9C00572B268FC3005111FB /* 12 */,
+				BF9C001F2B268FC3005111FB /* 13 */,
+				BF9C00632B268FC3005111FB /* 14 */,
+				BF9C00532B268FC3005111FB /* 15 */,
+				BF9C00432B268FC3005111FB /* 16 */,
+				BF9C006B2B268FC3005111FB /* 17 */,
+				BF9C004F2B268FC3005111FB /* 18 */,
+				BF9C002B2B268FC3005111FB /* 19 */,
+				BF9C00232B268FC3005111FB /* 20 */,
+				BF9C00372B268FC3005111FB /* 21 */,
+				BF9C00272B268FC3005111FB /* 22 */,
+				BF9C00332B268FC3005111FB /* 23 */,
+				BF9C002F2B268FC3005111FB /* 24 */,
+				BF9C003B2B268FC3005111FB /* 25 */,
 			);
 			path = Puzzles;
 			sourceTree = "<group>";
@@ -192,6 +402,216 @@
 				BF9C000E2B268570005111FB /* Input4.txt */,
 			);
 			path = 4;
+			sourceTree = "<group>";
+		};
+		BF9C00152B268E10005111FB /* 5 */ = {
+			isa = PBXGroup;
+			children = (
+				BF9C00182B268E10005111FB /* Solve5.swift */,
+				BF9C00162B268E10005111FB /* Example5.txt */,
+				BF9C00172B268E10005111FB /* Input5.txt */,
+			);
+			path = 5;
+			sourceTree = "<group>";
+		};
+		BF9C001F2B268FC3005111FB /* 13 */ = {
+			isa = PBXGroup;
+			children = (
+				BF9C00202B268FC3005111FB /* Example13.txt */,
+				BF9C00212B268FC3005111FB /* Solve13.swift */,
+				BF9C00222B268FC3005111FB /* Input13.txt */,
+			);
+			path = 13;
+			sourceTree = "<group>";
+		};
+		BF9C00232B268FC3005111FB /* 20 */ = {
+			isa = PBXGroup;
+			children = (
+				BF9C00242B268FC3005111FB /* Input20.txt */,
+				BF9C00252B268FC3005111FB /* Solve20.swift */,
+				BF9C00262B268FC3005111FB /* Example20.txt */,
+			);
+			path = 20;
+			sourceTree = "<group>";
+		};
+		BF9C00272B268FC3005111FB /* 22 */ = {
+			isa = PBXGroup;
+			children = (
+				BF9C00282B268FC3005111FB /* Input22.txt */,
+				BF9C00292B268FC3005111FB /* Example22.txt */,
+				BF9C002A2B268FC3005111FB /* Solve22.swift */,
+			);
+			path = 22;
+			sourceTree = "<group>";
+		};
+		BF9C002B2B268FC3005111FB /* 19 */ = {
+			isa = PBXGroup;
+			children = (
+				BF9C002C2B268FC3005111FB /* Input19.txt */,
+				BF9C002D2B268FC3005111FB /* Solve19.swift */,
+				BF9C002E2B268FC3005111FB /* Example19.txt */,
+			);
+			path = 19;
+			sourceTree = "<group>";
+		};
+		BF9C002F2B268FC3005111FB /* 24 */ = {
+			isa = PBXGroup;
+			children = (
+				BF9C00302B268FC3005111FB /* Input24.txt */,
+				BF9C00312B268FC3005111FB /* Solve24.swift */,
+				BF9C00322B268FC3005111FB /* Example24.txt */,
+			);
+			path = 24;
+			sourceTree = "<group>";
+		};
+		BF9C00332B268FC3005111FB /* 23 */ = {
+			isa = PBXGroup;
+			children = (
+				BF9C00342B268FC3005111FB /* Input23.txt */,
+				BF9C00352B268FC3005111FB /* Solve23.swift */,
+				BF9C00362B268FC3005111FB /* Example23.txt */,
+			);
+			path = 23;
+			sourceTree = "<group>";
+		};
+		BF9C00372B268FC3005111FB /* 21 */ = {
+			isa = PBXGroup;
+			children = (
+				BF9C00382B268FC3005111FB /* Input21.txt */,
+				BF9C00392B268FC3005111FB /* Solve21.swift */,
+				BF9C003A2B268FC3005111FB /* Example21.txt */,
+			);
+			path = 21;
+			sourceTree = "<group>";
+		};
+		BF9C003B2B268FC3005111FB /* 25 */ = {
+			isa = PBXGroup;
+			children = (
+				BF9C003C2B268FC3005111FB /* Input25.txt */,
+				BF9C003D2B268FC3005111FB /* Solve25.swift */,
+				BF9C003E2B268FC3005111FB /* Example25.txt */,
+			);
+			path = 25;
+			sourceTree = "<group>";
+		};
+		BF9C003F2B268FC3005111FB /* 11 */ = {
+			isa = PBXGroup;
+			children = (
+				BF9C00402B268FC3005111FB /* Solve11.swift */,
+				BF9C00412B268FC3005111FB /* Example11.txt */,
+				BF9C00422B268FC3005111FB /* Input11.txt */,
+			);
+			path = 11;
+			sourceTree = "<group>";
+		};
+		BF9C00432B268FC3005111FB /* 16 */ = {
+			isa = PBXGroup;
+			children = (
+				BF9C00442B268FC3005111FB /* Example16.txt */,
+				BF9C00452B268FC3005111FB /* Solve16.swift */,
+				BF9C00462B268FC3005111FB /* Input16.txt */,
+			);
+			path = 16;
+			sourceTree = "<group>";
+		};
+		BF9C00472B268FC3005111FB /* 8 */ = {
+			isa = PBXGroup;
+			children = (
+				BF9C00482B268FC3005111FB /* Input8.txt */,
+				BF9C00492B268FC3005111FB /* Solve8.swift */,
+				BF9C004A2B268FC3005111FB /* Example8.txt */,
+			);
+			path = 8;
+			sourceTree = "<group>";
+		};
+		BF9C004B2B268FC3005111FB /* 9 */ = {
+			isa = PBXGroup;
+			children = (
+				BF9C004C2B268FC3005111FB /* Solve9.swift */,
+				BF9C004D2B268FC3005111FB /* Input9.txt */,
+				BF9C004E2B268FC3005111FB /* Example9.txt */,
+			);
+			path = 9;
+			sourceTree = "<group>";
+		};
+		BF9C004F2B268FC3005111FB /* 18 */ = {
+			isa = PBXGroup;
+			children = (
+				BF9C00502B268FC3005111FB /* Input18.txt */,
+				BF9C00512B268FC3005111FB /* Solve18.swift */,
+				BF9C00522B268FC3005111FB /* Example18.txt */,
+			);
+			path = 18;
+			sourceTree = "<group>";
+		};
+		BF9C00532B268FC3005111FB /* 15 */ = {
+			isa = PBXGroup;
+			children = (
+				BF9C00542B268FC3005111FB /* Solve15.swift */,
+				BF9C00552B268FC3005111FB /* Example15.txt */,
+				BF9C00562B268FC3005111FB /* Input15.txt */,
+			);
+			path = 15;
+			sourceTree = "<group>";
+		};
+		BF9C00572B268FC3005111FB /* 12 */ = {
+			isa = PBXGroup;
+			children = (
+				BF9C00582B268FC3005111FB /* Example12.txt */,
+				BF9C00592B268FC3005111FB /* Solve12.swift */,
+				BF9C005A2B268FC3005111FB /* Input12.txt */,
+			);
+			path = 12;
+			sourceTree = "<group>";
+		};
+		BF9C005B2B268FC3005111FB /* 7 */ = {
+			isa = PBXGroup;
+			children = (
+				BF9C005C2B268FC3005111FB /* Example7.txt */,
+				BF9C005D2B268FC3005111FB /* Input7.txt */,
+				BF9C005E2B268FC3005111FB /* Solve7.swift */,
+			);
+			path = 7;
+			sourceTree = "<group>";
+		};
+		BF9C005F2B268FC3005111FB /* 6 */ = {
+			isa = PBXGroup;
+			children = (
+				BF9C00602B268FC3005111FB /* Example6.txt */,
+				BF9C00612B268FC3005111FB /* Input6.txt */,
+				BF9C00622B268FC3005111FB /* Solve6.swift */,
+			);
+			path = 6;
+			sourceTree = "<group>";
+		};
+		BF9C00632B268FC3005111FB /* 14 */ = {
+			isa = PBXGroup;
+			children = (
+				BF9C00642B268FC3005111FB /* Example14.txt */,
+				BF9C00652B268FC3005111FB /* Solve14.swift */,
+				BF9C00662B268FC3005111FB /* Input14.txt */,
+			);
+			path = 14;
+			sourceTree = "<group>";
+		};
+		BF9C00672B268FC3005111FB /* 10 */ = {
+			isa = PBXGroup;
+			children = (
+				BF9C00682B268FC3005111FB /* Example10.txt */,
+				BF9C00692B268FC3005111FB /* Solve10.swift */,
+				BF9C006A2B268FC3005111FB /* Input10.txt */,
+			);
+			path = 10;
+			sourceTree = "<group>";
+		};
+		BF9C006B2B268FC3005111FB /* 17 */ = {
+			isa = PBXGroup;
+			children = (
+				BF9C006C2B268FC3005111FB /* Example17.txt */,
+				BF9C006D2B268FC3005111FB /* Solve17.swift */,
+				BF9C006E2B268FC3005111FB /* Input17.txt */,
+			);
+			path = 17;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -281,16 +701,58 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF9C00BB2B268FC3005111FB /* Example18.txt in Resources */,
 				BF3E13012B1D5E5300F148F3 /* Example2.txt in Resources */,
+				BF9C00DF2B268FC3005111FB /* Input10.txt in Resources */,
 				BF3E13052B1D5E5300F148F3 /* Example3.txt in Resources */,
+				BF9C00A92B268FC3005111FB /* Input16.txt in Resources */,
+				BF9C00C72B268FC3005111FB /* Input12.txt in Resources */,
 				BF3E12C22B1D5D5100F148F3 /* Preview Assets.xcassets in Resources */,
+				BF9C00C92B268FC3005111FB /* Example7.txt in Resources */,
+				BF9C00D52B268FC3005111FB /* Example14.txt in Resources */,
+				BF9C00812B268FC3005111FB /* Input19.txt in Resources */,
+				BF9C001B2B268E10005111FB /* Input5.txt in Resources */,
+				BF9C00AF2B268FC3005111FB /* Example8.txt in Resources */,
+				BF9C00DB2B268FC3005111FB /* Example10.txt in Resources */,
+				BF9C008B2B268FC3005111FB /* Example24.txt in Resources */,
+				BF9C00752B268FC3005111FB /* Input20.txt in Resources */,
+				BF9C007B2B268FC3005111FB /* Input22.txt in Resources */,
+				BF9C00CB2B268FC3005111FB /* Input7.txt in Resources */,
+				BF9C00D12B268FC3005111FB /* Input6.txt in Resources */,
+				BF9C00E12B268FC3005111FB /* Example17.txt in Resources */,
+				BF9C00792B268FC3005111FB /* Example20.txt in Resources */,
+				BF9C00992B268FC3005111FB /* Input25.txt in Resources */,
+				BF9C00B72B268FC3005111FB /* Input18.txt in Resources */,
+				BF9C00932B268FC3005111FB /* Input21.txt in Resources */,
+				BF9C00A32B268FC3005111FB /* Input11.txt in Resources */,
+				BF9C00B32B268FC3005111FB /* Input9.txt in Resources */,
+				BF9C00B52B268FC3005111FB /* Example9.txt in Resources */,
+				BF9C007D2B268FC3005111FB /* Example22.txt in Resources */,
+				BF9C00912B268FC3005111FB /* Example23.txt in Resources */,
 				BF3E12F72B1D5E5300F148F3 /* Input1.txt in Resources */,
+				BF9C00D92B268FC3005111FB /* Input14.txt in Resources */,
+				BF9C00CF2B268FC3005111FB /* Example6.txt in Resources */,
+				BF9C00A12B268FC3005111FB /* Example11.txt in Resources */,
+				BF9C00872B268FC3005111FB /* Input24.txt in Resources */,
+				BF9C006F2B268FC3005111FB /* Example13.txt in Resources */,
 				BF9C00132B268570005111FB /* Input4.txt in Resources */,
+				BF9C00192B268E10005111FB /* Example5.txt in Resources */,
 				BF3E12BF2B1D5D5100F148F3 /* Assets.xcassets in Resources */,
 				BF3E12FF2B1D5E5300F148F3 /* Input2.txt in Resources */,
 				BF9C00092B255862005111FB /* Example3b.txt in Resources */,
 				BF44DECA2B1D644A001964F7 /* Example1b.txt in Resources */,
 				BF9C000F2B268570005111FB /* Example4.txt in Resources */,
+				BF9C00972B268FC3005111FB /* Example21.txt in Resources */,
+				BF9C00BF2B268FC3005111FB /* Example15.txt in Resources */,
+				BF9C00C12B268FC3005111FB /* Input15.txt in Resources */,
+				BF9C00A52B268FC3005111FB /* Example16.txt in Resources */,
+				BF9C00AB2B268FC3005111FB /* Input8.txt in Resources */,
+				BF9C008D2B268FC3005111FB /* Input23.txt in Resources */,
+				BF9C00732B268FC3005111FB /* Input13.txt in Resources */,
+				BF9C00C32B268FC3005111FB /* Example12.txt in Resources */,
+				BF9C009D2B268FC3005111FB /* Example25.txt in Resources */,
+				BF9C00852B268FC3005111FB /* Example19.txt in Resources */,
+				BF9C00E52B268FC3005111FB /* Input17.txt in Resources */,
 				BF3E13032B1D5E5300F148F3 /* Input3.txt in Resources */,
 				BF3E12F92B1D5E5300F148F3 /* Example1.txt in Resources */,
 			);
@@ -300,15 +762,57 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF9C00AC2B268FC3005111FB /* Input8.txt in Resources */,
+				BF9C00CC2B268FC3005111FB /* Input7.txt in Resources */,
+				BF9C00D62B268FC3005111FB /* Example14.txt in Resources */,
+				BF9C007E2B268FC3005111FB /* Example22.txt in Resources */,
+				BF9C00E02B268FC3005111FB /* Input10.txt in Resources */,
+				BF9C00C42B268FC3005111FB /* Example12.txt in Resources */,
 				BF3E13022B1D5E5300F148F3 /* Example2.txt in Resources */,
+				BF9C00E22B268FC3005111FB /* Example17.txt in Resources */,
+				BF9C001A2B268E10005111FB /* Example5.txt in Resources */,
 				BF9C00142B268570005111FB /* Input4.txt in Resources */,
+				BF9C00DC2B268FC3005111FB /* Example10.txt in Resources */,
+				BF9C00982B268FC3005111FB /* Example21.txt in Resources */,
 				BF3E13002B1D5E5300F148F3 /* Input2.txt in Resources */,
+				BF9C00B42B268FC3005111FB /* Input9.txt in Resources */,
+				BF9C008C2B268FC3005111FB /* Example24.txt in Resources */,
 				BF9C00102B268570005111FB /* Example4.txt in Resources */,
+				BF9C00762B268FC3005111FB /* Input20.txt in Resources */,
+				BF9C00A42B268FC3005111FB /* Input11.txt in Resources */,
 				BF3E12F82B1D5E5300F148F3 /* Input1.txt in Resources */,
 				BF3E13062B1D5E5300F148F3 /* Example3.txt in Resources */,
+				BF9C00CA2B268FC3005111FB /* Example7.txt in Resources */,
+				BF9C009E2B268FC3005111FB /* Example25.txt in Resources */,
+				BF9C00862B268FC3005111FB /* Example19.txt in Resources */,
+				BF9C00A62B268FC3005111FB /* Example16.txt in Resources */,
+				BF9C00D02B268FC3005111FB /* Example6.txt in Resources */,
+				BF9C00822B268FC3005111FB /* Input19.txt in Resources */,
+				BF9C00C22B268FC3005111FB /* Input15.txt in Resources */,
+				BF9C00E62B268FC3005111FB /* Input17.txt in Resources */,
+				BF9C00942B268FC3005111FB /* Input21.txt in Resources */,
+				BF9C001C2B268E10005111FB /* Input5.txt in Resources */,
 				BF3E13042B1D5E5300F148F3 /* Input3.txt in Resources */,
+				BF9C00B62B268FC3005111FB /* Example9.txt in Resources */,
+				BF9C00A22B268FC3005111FB /* Example11.txt in Resources */,
+				BF9C00B02B268FC3005111FB /* Example8.txt in Resources */,
+				BF9C00922B268FC3005111FB /* Example23.txt in Resources */,
+				BF9C00742B268FC3005111FB /* Input13.txt in Resources */,
+				BF9C007A2B268FC3005111FB /* Example20.txt in Resources */,
+				BF9C00C02B268FC3005111FB /* Example15.txt in Resources */,
+				BF9C008E2B268FC3005111FB /* Input23.txt in Resources */,
+				BF9C00AA2B268FC3005111FB /* Input16.txt in Resources */,
 				BF3E12FA2B1D5E5300F148F3 /* Example1.txt in Resources */,
+				BF9C00B82B268FC3005111FB /* Input18.txt in Resources */,
+				BF9C007C2B268FC3005111FB /* Input22.txt in Resources */,
+				BF9C00DA2B268FC3005111FB /* Input14.txt in Resources */,
+				BF9C00D22B268FC3005111FB /* Input6.txt in Resources */,
 				BF9C000A2B255862005111FB /* Example3b.txt in Resources */,
+				BF9C00702B268FC3005111FB /* Example13.txt in Resources */,
+				BF9C00C82B268FC3005111FB /* Input12.txt in Resources */,
+				BF9C009A2B268FC3005111FB /* Input25.txt in Resources */,
+				BF9C00BC2B268FC3005111FB /* Example18.txt in Resources */,
+				BF9C00882B268FC3005111FB /* Input24.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -319,12 +823,33 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF9C00BD2B268FC3005111FB /* Solve15.swift in Sources */,
+				BF9C00CD2B268FC3005111FB /* Solve7.swift in Sources */,
+				BF9C00DD2B268FC3005111FB /* Solve10.swift in Sources */,
+				BF9C00B12B268FC3005111FB /* Solve9.swift in Sources */,
+				BF9C00832B268FC3005111FB /* Solve19.swift in Sources */,
 				BF3E12FB2B1D5E5300F148F3 /* Solve1.swift in Sources */,
+				BF9C00E32B268FC3005111FB /* Solve17.swift in Sources */,
+				BF9C00AD2B268FC3005111FB /* Solve8.swift in Sources */,
+				BF9C00952B268FC3005111FB /* Solve21.swift in Sources */,
+				BF9C00A72B268FC3005111FB /* Solve16.swift in Sources */,
+				BF9C009F2B268FC3005111FB /* Solve11.swift in Sources */,
+				BF9C00D72B268FC3005111FB /* Solve14.swift in Sources */,
+				BF9C001D2B268E10005111FB /* Solve5.swift in Sources */,
 				BF3E12FD2B1D5E5300F148F3 /* Solve2.swift in Sources */,
+				BF9C007F2B268FC3005111FB /* Solve22.swift in Sources */,
 				BF9C00112B268570005111FB /* Solve4.swift in Sources */,
 				BF3E12E52B1D5D9400F148F3 /* Puzzles2023.swift in Sources */,
+				BF9C00D32B268FC3005111FB /* Solve6.swift in Sources */,
+				BF9C009B2B268FC3005111FB /* Solve25.swift in Sources */,
+				BF9C00712B268FC3005111FB /* Solve13.swift in Sources */,
+				BF9C00B92B268FC3005111FB /* Solve18.swift in Sources */,
 				BF3E13072B1D5E5300F148F3 /* Solve3.swift in Sources */,
 				BF3E12BB2B1D5D5000F148F3 /* AOC2023App.swift in Sources */,
+				BF9C00C52B268FC3005111FB /* Solve12.swift in Sources */,
+				BF9C00772B268FC3005111FB /* Solve20.swift in Sources */,
+				BF9C00892B268FC3005111FB /* Solve24.swift in Sources */,
+				BF9C008F2B268FC3005111FB /* Solve23.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -332,11 +857,32 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF9C00BA2B268FC3005111FB /* Solve18.swift in Sources */,
 				BF9C00122B268570005111FB /* Solve4.swift in Sources */,
 				BF3E13082B1D5E5300F148F3 /* Solve3.swift in Sources */,
+				BF9C00902B268FC3005111FB /* Solve23.swift in Sources */,
 				BF3E12CC2B1D5D5100F148F3 /* AOC2023Tests.swift in Sources */,
+				BF9C00CE2B268FC3005111FB /* Solve7.swift in Sources */,
+				BF9C00D82B268FC3005111FB /* Solve14.swift in Sources */,
+				BF9C009C2B268FC3005111FB /* Solve25.swift in Sources */,
+				BF9C00782B268FC3005111FB /* Solve20.swift in Sources */,
 				BF3E12FE2B1D5E5300F148F3 /* Solve2.swift in Sources */,
 				BF3E12FC2B1D5E5300F148F3 /* Solve1.swift in Sources */,
+				BF9C00C62B268FC3005111FB /* Solve12.swift in Sources */,
+				BF9C00A82B268FC3005111FB /* Solve16.swift in Sources */,
+				BF9C001E2B268E10005111FB /* Solve5.swift in Sources */,
+				BF9C00A02B268FC3005111FB /* Solve11.swift in Sources */,
+				BF9C00B22B268FC3005111FB /* Solve9.swift in Sources */,
+				BF9C008A2B268FC3005111FB /* Solve24.swift in Sources */,
+				BF9C00722B268FC3005111FB /* Solve13.swift in Sources */,
+				BF9C00802B268FC3005111FB /* Solve22.swift in Sources */,
+				BF9C00DE2B268FC3005111FB /* Solve10.swift in Sources */,
+				BF9C00962B268FC3005111FB /* Solve21.swift in Sources */,
+				BF9C00D42B268FC3005111FB /* Solve6.swift in Sources */,
+				BF9C00AE2B268FC3005111FB /* Solve8.swift in Sources */,
+				BF9C00842B268FC3005111FB /* Solve19.swift in Sources */,
+				BF9C00BE2B268FC3005111FB /* Solve15.swift in Sources */,
+				BF9C00E42B268FC3005111FB /* Solve17.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
