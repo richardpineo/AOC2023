@@ -10,7 +10,7 @@ class Puzzles2023: PuzzlesRepo {
 			Puzzle(year: year, id: 1, name: "Trebuchet?!") { Solve1() },
 			Puzzle(year: year, id: 2, name: "Cube Conundrum") { Solve2() },
 			Puzzle(year: year, id: 3, name: "Gear Ratios") { Solve3() },
-
+			Puzzle(year: year, id: 4, name: "Scratchcards") { Solve4() },
 		])
 	}
 

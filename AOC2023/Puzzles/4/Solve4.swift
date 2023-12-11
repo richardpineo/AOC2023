@@ -8,7 +8,7 @@ class Solve4: PuzzleSolver {
 	}
 
 	func solveBExamples() -> Bool {
-		solveB("Example4") == 0
+		solveB("Example4") == 30
 	}
 
 	var answerA = "26346"
@@ -34,7 +34,16 @@ class Solve4: PuzzleSolver {
 
 	func solveB(_ filename: String) -> Int {
 		let cards = load(filename)
-		return cards.count
+		var cardCount: [Int: Int] = [:]
+		for number in 1 ... cards.count {
+			cardCount[number] = 1
+		}
+		cards.forEach { card in
+			for index in 0 ..< card.numMatches {
+				cardCount[index + 1 + card.number]! += cardCount[card.number]!
+			}
+		}
+		return cardCount.values.reduce(0, +)
 	}
 
 	struct Card {
