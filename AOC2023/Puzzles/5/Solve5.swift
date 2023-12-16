@@ -9,11 +9,11 @@ class Solve5: PuzzleSolver {
 	}
 
 	func solveBExamples() -> Bool {
-		solveB("Example5") == 0
+		solveB("Example5") == 46
 	}
 
 	var answerA = "424490994"
-	var answerB = "0"
+	var answerB = "15290096"
 
 	func solveA() -> String {
 		solveA("Input5").description
@@ -22,6 +22,8 @@ class Solve5: PuzzleSolver {
 	func solveB() -> String {
 		solveB("Input5").description
 	}
+
+	var shouldTestB = false
 
 	func solveA(_ filename: String) -> Int {
 		let almanac = load(filename)
@@ -33,20 +35,24 @@ class Solve5: PuzzleSolver {
 		return mappedSeeds.min()!
 	}
 
+	// Super slow impl butit wokrs after 3-4 minutes.
 	func solveB(_ filename: String) -> Int {
 		let almanac = load(filename)
 
-		var minSeed: Int = .max
-		almanac.seedsUsingRanges.forEach { seedRange in
-			for seed in seedRange.start ..< seedRange.start + seedRange.count {
-				let mapped = almanac.map(seed)
-				print("\(seed) mapped to \(mapped)")
-				if mapped < minSeed {
-					minSeed = mapped
-				}
+		let rangeSeeds = almanac.seedsUsingRanges
+
+		func validSeed(_ seed: Int) -> Bool {
+			rangeSeeds.first { seed >= $0.start && seed < $0.start + $0.count } != nil
+		}
+
+		for answer in 0 ..< Int.max {
+			let reverseMapped = almanac.reverseMap(answer)
+
+			if validSeed(reverseMapped) {
+				return answer
 			}
 		}
-		return minSeed
+		return -666
 	}
 
 	struct Almanac {
@@ -80,6 +86,14 @@ class Solve5: PuzzleSolver {
 					}
 					return nil
 				}
+
+				func reverseMap(_ value: Int) -> Int? {
+					let sourceValue = value + source - dest
+					if sourceValue >= source, sourceValue < source + length {
+						return sourceValue
+					}
+					return nil
+				}
 			}
 
 			var entries: [Entry]
@@ -91,12 +105,28 @@ class Solve5: PuzzleSolver {
 				}
 				return value
 			}
+
+			func reverseMap(_ value: Int) -> Int {
+				let found = entries.first { $0.reverseMap(value) != nil }
+				if let found = found {
+					return found.reverseMap(value)!
+				}
+				return value
+			}
 		}
 
 		func map(_ value: Int) -> Int {
 			maps.reduce(value) {
 				$1.map($0)
 			}
+		}
+
+		func reverseMap(_ value: Int) -> Int {
+			var chain: Int = value
+			for map in maps.reversed() {
+				chain = map.reverseMap(chain)
+			}
+			return chain
 		}
 
 		var maps: [Map]
