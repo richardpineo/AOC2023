@@ -12,7 +12,7 @@ class Solve5: PuzzleSolver {
 		solveB("Example5") == 0
 	}
 
-	var answerA = "0"
+	var answerA = "424490994"
 	var answerB = "0"
 
 	func solveA() -> String {
@@ -25,7 +25,12 @@ class Solve5: PuzzleSolver {
 
 	func solveA(_ filename: String) -> Int {
 		let almanac = load(filename)
-		return 0
+		
+		let mappedSeeds = almanac.seeds.map {
+			almanac.map($0)
+		}
+		
+		return mappedSeeds.min()!
 	}
 
 	func solveB(_: String) -> Int {
@@ -43,9 +48,32 @@ class Solve5: PuzzleSolver {
 				var source: Int
 				var dest: Int
 				var length: Int
+				
+				func map(_ value: Int) -> Int? {
+					if value >= source && value < source + length {
+						return value - source + dest
+					}
+					return nil
+				}
 			}
 
 			var entries: [Entry]
+
+			func map( _ value: Int) -> Int {
+				let mapped = entries.compactMap {
+					if let mappedValue = $0.map(value) {
+						return mappedValue
+					}
+					return nil
+				}
+				return mapped.first ?? value
+			}
+		}
+		
+		func map( _ value: Int) -> Int {
+			maps.reduce(value) {
+				return $1.map($0)
+			}
 		}
 
 		var maps: [Map]
@@ -82,7 +110,7 @@ class Solve5: PuzzleSolver {
 				if values.count != 3 {
 					break
 				}
-				entries.append(.init(source: values[0], dest: values[1], length: values[2]))
+				entries.append(.init(source: values[1], dest: values[0], length: values[2]))
 				index += 1
 			}
 			maps.append(.init(sourceName: String(mapNames.output.1), destName: String(mapNames.output.2), entries: entries))
