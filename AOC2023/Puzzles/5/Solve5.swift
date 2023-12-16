@@ -25,20 +25,45 @@ class Solve5: PuzzleSolver {
 
 	func solveA(_ filename: String) -> Int {
 		let almanac = load(filename)
-		
+
 		let mappedSeeds = almanac.seeds.map {
 			almanac.map($0)
 		}
-		
+
 		return mappedSeeds.min()!
 	}
 
-	func solveB(_: String) -> Int {
-		return 0
+	func solveB(_ filename: String) -> Int {
+		let almanac = load(filename)
+
+		var minSeed: Int = .max
+		almanac.seedsUsingRanges.forEach { seedRange in
+			for seed in seedRange.start ..< seedRange.start + seedRange.count {
+				let mapped = almanac.map(seed)
+				print("\(seed) mapped to \(mapped)")
+				if mapped < minSeed {
+					minSeed = mapped
+				}
+			}
+		}
+		return minSeed
 	}
 
 	struct Almanac {
 		var seeds: [Int]
+
+		struct SeedRange {
+			var start: Int
+			var count: Int
+		}
+
+		var seedsUsingRanges: [SeedRange] {
+			var rangeSeeds: [SeedRange] = []
+			for index in 0 ..< seeds.count / 2 {
+				rangeSeeds.append(.init(start: seeds[index * 2], count: seeds[index * 2 + 1]))
+			}
+			return rangeSeeds
+		}
 
 		struct Map {
 			var sourceName: String
@@ -48,9 +73,9 @@ class Solve5: PuzzleSolver {
 				var source: Int
 				var dest: Int
 				var length: Int
-				
+
 				func map(_ value: Int) -> Int? {
-					if value >= source && value < source + length {
+					if value >= source, value < source + length {
 						return value - source + dest
 					}
 					return nil
@@ -59,20 +84,18 @@ class Solve5: PuzzleSolver {
 
 			var entries: [Entry]
 
-			func map( _ value: Int) -> Int {
-				let mapped = entries.compactMap {
-					if let mappedValue = $0.map(value) {
-						return mappedValue
-					}
-					return nil
+			func map(_ value: Int) -> Int {
+				let found = entries.first { $0.map(value) != nil }
+				if let found = found {
+					return found.map(value)!
 				}
-				return mapped.first ?? value
+				return value
 			}
 		}
-		
-		func map( _ value: Int) -> Int {
+
+		func map(_ value: Int) -> Int {
 			maps.reduce(value) {
-				return $1.map($0)
+				$1.map($0)
 			}
 		}
 
