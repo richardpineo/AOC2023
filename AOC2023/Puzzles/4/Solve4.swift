@@ -50,17 +50,18 @@ class Solve4: PuzzleSolver {
 		var number: Int
 		var winners: [Int]
 		var ours: [Int]
-		
+
 		var numMatches: Int {
 			ours.filter {
 				winners.contains($0)
 			}.count
 		}
+
 		var points: Int {
 			if numMatches == 0 {
 				return 0
 			}
-			return lround(pow(2, Double( numMatches-1)))
+			return lround(pow(2, Double(numMatches - 1)))
 		}
 	}
 
@@ -71,8 +72,8 @@ class Solve4: PuzzleSolver {
 			let spaceIndex = line.index(of: " ")!.utf16Offset(in: line)
 			let colonIndex = line.index(of: ":")!.utf16Offset(in: line)
 			let cardNumberStr = line.subString(start: spaceIndex + 1, count: colonIndex - spaceIndex - 1)
-			let cardNumber = Int(cardNumberStr.trimmingCharacters(in: CharacterSet.whitespaces) )!
-			
+			let cardNumber = Int(cardNumberStr.trimmingCharacters(in: CharacterSet.whitespaces))!
+
 			let divIndex = line.index(of: "|")!.utf16Offset(in: line)
 			let winners = line.subString(start: colonIndex + 2, count: divIndex - colonIndex - 3)
 				.split(separator: " ")
@@ -87,4 +88,3 @@ class Solve4: PuzzleSolver {
 		}
 	}
 }
-

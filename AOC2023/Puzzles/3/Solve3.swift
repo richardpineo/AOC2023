@@ -5,11 +5,11 @@ import Foundation
 class Solve3: PuzzleSolver {
 	func solveAExamples() -> Bool {
 		solveA("Example3") == 4361 &&
-		solveA("Example3b") == 925
+			solveA("Example3b") == 925
 	}
 
 	func solveBExamples() -> Bool {
-		solveB("Example3") == 467835
+		solveB("Example3") == 467_835
 	}
 
 	var answerA = "520135"
@@ -28,14 +28,15 @@ class Solve3: PuzzleSolver {
 			var posStart: Position2D
 			var posEnd: Position2D = .origin
 		}
-		
+
 		init(grid: Grid2D, possibleParts: [PossiblePart]) {
 			self.grid = grid
 			self.possibleParts = possibleParts
 		}
+
 		var grid: Grid2D
 		var possibleParts: [PossiblePart]
-		
+
 		func partNumber(part: PossiblePart) -> Int {
 			var numberStr = ""
 			for x in part.posStart.x ... part.posEnd.x {
@@ -43,11 +44,11 @@ class Solve3: PuzzleSolver {
 			}
 			return Int(numberStr) ?? 0
 		}
-		
+
 		func gearRatio(gear: Gear) -> Int {
 			partNumber(part: gear.part1) * partNumber(part: gear.part2)
 		}
-		
+
 		func neighboringPart(part: PossiblePart) -> [Position2D] {
 			if let found = cachedNeighbors[part] {
 				return found
@@ -63,6 +64,7 @@ class Solve3: PuzzleSolver {
 			cachedNeighbors[part] = answer
 			return answer
 		}
+
 		private var cachedNeighbors: [PossiblePart: [Position2D]] = .init()
 	}
 
@@ -70,12 +72,12 @@ class Solve3: PuzzleSolver {
 		var part1: Schematic.PossiblePart
 		var part2: Schematic.PossiblePart
 	}
-	 
+
 	func isSymbol(_ c: Character) -> Bool {
 		let symbols = "!@#$%^&*()-+/="
 		return symbols.contains(c)
 	}
-	
+
 	func findValidParts(schematic: Schematic) -> [Schematic.PossiblePart] {
 		return schematic.possibleParts.filter { part in
 			let neighbors = schematic.neighboringPart(part: part)
@@ -92,12 +94,12 @@ class Solve3: PuzzleSolver {
 
 		// Find all the parts that are adjacent to a symbol
 		let parts = findValidParts(schematic: schematic)
-		
+
 		// Convert parts into numbers
 		let numbers = parts.compactMap {
 			schematic.partNumber(part: $0)
 		}
-		
+
 		return numbers.reduce(0,+)
 	}
 
@@ -108,7 +110,7 @@ class Solve3: PuzzleSolver {
 		return gearPositions.compactMap { gearPos in
 			// Find neighboring parts
 			let neighboringParts = schematic.possibleParts.filter { part in
-				return schematic.neighboringPart(part: part).contains(gearPos)
+				schematic.neighboringPart(part: part).contains(gearPos)
 			}
 			if neighboringParts.count != 2 {
 				return nil
@@ -116,18 +118,18 @@ class Solve3: PuzzleSolver {
 			return .init(part1: neighboringParts[0], part2: neighboringParts[1])
 		}
 	}
-	
+
 	func solveB(_ fileName: String) -> Int {
 		let schematic = loadParts(fileName)
 
 		// Find all the parts that are adjacent to a symbol
 		let gears = findGears(schematic: schematic)
-		
+
 		// Convert parts into ratios
 		let ratios = gears.map {
 			schematic.gearRatio(gear: $0)
 		}
-		
+
 		return ratios.reduce(0,+)
 	}
 
@@ -159,11 +161,11 @@ class Solve3: PuzzleSolver {
 				parts.append(.init(posStart: currentStartPos, posEnd: .init(grid.maxPos.x - 1, y)))
 			}
 		}
-		
+
 		// Sanity check.
 		grid.allPositions.forEach {
 			let value = grid.value($0)
-			if value != "." && !value.isNumber && !isSymbol(value) {
+			if value != ".", !value.isNumber, !isSymbol(value) {
 				print("Uknown symbol: \(value)")
 			}
 		}
