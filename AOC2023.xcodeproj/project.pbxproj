@@ -162,6 +162,7 @@
 		BF9C00E42B268FC3005111FB /* Solve17.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9C006D2B268FC3005111FB /* Solve17.swift */; };
 		BF9C00E52B268FC3005111FB /* Input17.txt in Resources */ = {isa = PBXBuildFile; fileRef = BF9C006E2B268FC3005111FB /* Input17.txt */; };
 		BF9C00E62B268FC3005111FB /* Input17.txt in Resources */ = {isa = PBXBuildFile; fileRef = BF9C006E2B268FC3005111FB /* Input17.txt */; };
+		BFC6ADEC2B2EA9BF00D1F461 /* Example8b.txt in Resources */ = {isa = PBXBuildFile; fileRef = BFC6ADEB2B2EA9BF00D1F461 /* Example8b.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -257,6 +258,7 @@
 		BF9C006C2B268FC3005111FB /* Example17.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Example17.txt; sourceTree = "<group>"; };
 		BF9C006D2B268FC3005111FB /* Solve17.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Solve17.swift; sourceTree = "<group>"; };
 		BF9C006E2B268FC3005111FB /* Input17.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Input17.txt; sourceTree = "<group>"; };
+		BFC6ADEB2B2EA9BF00D1F461 /* Example8b.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Example8b.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -514,6 +516,7 @@
 				BF9C00482B268FC3005111FB /* Input8.txt */,
 				BF9C00492B268FC3005111FB /* Solve8.swift */,
 				BF9C004A2B268FC3005111FB /* Example8.txt */,
+				BFC6ADEB2B2EA9BF00D1F461 /* Example8b.txt */,
 			);
 			path = 8;
 			sourceTree = "<group>";
@@ -745,6 +748,7 @@
 				BF9C00E52B268FC3005111FB /* Input17.txt in Resources */,
 				BF3E13032B1D5E5300F148F3 /* Input3.txt in Resources */,
 				BF3E12F92B1D5E5300F148F3 /* Example1.txt in Resources */,
+				BFC6ADEC2B2EA9BF00D1F461 /* Example8b.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
