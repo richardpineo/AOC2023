@@ -5,34 +5,35 @@ import RegexBuilder
 
 class Solve7: PuzzleSolver {
 	func solveAExamples() -> Bool {
-		solveA("Example7") == 6440
+		solve("Example7", jokerRule: false) == 6440
 	}
 
 	func solveBExamples() -> Bool {
-		solveB("Example7") == 5905
+		solve("Example7", jokerRule: true) == 5905
 	}
 
 	var answerA = "251106089"
-	var answerB = "0"
+	var answerB = "249620106"
 
 	func solveA() -> String {
-		solveA("Input7").description
+		solve("Input7", jokerRule: false).description
 	}
 
 	func solveB() -> String {
-		solveB("Input7").description
+		solve("Input7", jokerRule: true).description
 	}
 
-	func solveA(_ filename: String) -> Int {
-		let game = load(filename)
+	func solve(_ filename: String, jokerRule: Bool) -> Int {
+		let game = load(filename, jokerRule: jokerRule)
 		let sorted = game.sorted
-//		let descriptions = sorted.map { "\($0.rank): \($0.stringForm)" }
-//		print( descriptions.joined(separator: "\n"))
+		//	let descriptions = sorted.map { "\($0.rank): \($0.stringForm)" }
+		//	print( descriptions.joined(separator: "\n"))
 		var totalWinnings = 0
 		for rank in 1 ... sorted.count {
 			let winnings = sorted[rank - 1].bid * rank
 			totalWinnings += winnings
 		}
+		print("total: \(totalWinnings)")
 		return totalWinnings
 	}
 
@@ -45,6 +46,7 @@ class Solve7: PuzzleSolver {
 			var stringForm: String
 			var cards: [Int]
 			var bid: Int
+			var jokerRule: Bool
 
 			var rawValue: Int {
 				cards[0] * 10000 * 10000 +
@@ -65,13 +67,23 @@ class Solve7: PuzzleSolver {
 			}
 
 			var rank: Rank {
-				let dict = cards.reduce([:]) { d, c -> [Int: Int] in
+				var dict = cards.reduce([:]) { d, c -> [Int: Int] in
 					var d = d
 					let i = d[c] ?? 0
 					d[c] = i + 1
 					return d
 				}
-				let sorted = Array(dict.values.sorted().reversed())
+				var numJokers = 0
+				if jokerRule {
+					if let js = dict[2] {
+						if js < 5 {
+							dict.removeValue(forKey: 2)
+							numJokers = js
+						}
+					}
+				}
+				var sorted = Array(dict.values.sorted().reversed())
+				sorted[0] = sorted[0] + numJokers
 				switch sorted.count {
 				case 1:
 					return .fiveOfAKind
@@ -107,6 +119,17 @@ class Solve7: PuzzleSolver {
 		}
 	}
 
+	func convert(_ s: String, jokerRule: Bool) -> Int {
+		let raw = convert(s)
+		if !jokerRule {
+			return raw
+		}
+		if raw == 11 {
+			return 2
+		}
+		return raw + 1
+	}
+
 	func convert(_ s: String) -> Int {
 		let c = s.character(at: 0)
 		if c.isNumber {
@@ -122,7 +145,7 @@ class Solve7: PuzzleSolver {
 		}
 	}
 
-	func load(_ filename: String) -> Game {
+	func load(_ filename: String, jokerRule: Bool) -> Game {
 		let lines = FileHelper.load(filename)!.filter { !$0.isEmpty }
 
 		let handEx = Regex {
@@ -142,13 +165,14 @@ class Solve7: PuzzleSolver {
 			return .init(
 				stringForm: $0,
 				cards: [
-					convert(String(handMatch.output.1)),
-					convert(String(handMatch.output.2)),
-					convert(String(handMatch.output.3)),
-					convert(String(handMatch.output.4)),
-					convert(String(handMatch.output.5)),
+					convert(String(handMatch.output.1), jokerRule: jokerRule),
+					convert(String(handMatch.output.2), jokerRule: jokerRule),
+					convert(String(handMatch.output.3), jokerRule: jokerRule),
+					convert(String(handMatch.output.4), jokerRule: jokerRule),
+					convert(String(handMatch.output.5), jokerRule: jokerRule),
 				],
-				bid: Int(String(handMatch.output.6))!
+				bid: Int(String(handMatch.output.6))!,
+				jokerRule: jokerRule
 			)
 		}
 		return .init(hands: hands)
