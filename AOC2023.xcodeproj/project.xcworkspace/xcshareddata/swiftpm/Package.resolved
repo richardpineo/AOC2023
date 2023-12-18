@@ -8,6 +8,15 @@
         "branch" : "main",
         "revision" : "b923e28947f2d364aa1588f3cf968b088e2a89f7"
       }
+    },
+    {
+      "identity" : "swift-combinatorics",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/dankogai/swift-combinatorics.git",
+      "state" : {
+        "revision" : "959fb7cc9688b47b11b2a609c3dc176b6ec4e91c",
+        "version" : "0.1.0"
+      }
     }
   ],
   "version" : 2

@@ -164,6 +164,9 @@
 		BF9C00E62B268FC3005111FB /* Input17.txt in Resources */ = {isa = PBXBuildFile; fileRef = BF9C006E2B268FC3005111FB /* Input17.txt */; };
 		BFC6ADEC2B2EA9BF00D1F461 /* Example8b.txt in Resources */ = {isa = PBXBuildFile; fileRef = BFC6ADEB2B2EA9BF00D1F461 /* Example8b.txt */; };
 		BFFD8FEE2B30CBA800BCF12A /* Example10-2.txt in Resources */ = {isa = PBXBuildFile; fileRef = BFFD8FED2B30CBA800BCF12A /* Example10-2.txt */; };
+		BFFD8FF12B30E82300BCF12A /* Combinatorics in Frameworks */ = {isa = PBXBuildFile; productRef = BFFD8FF02B30E82300BCF12A /* Combinatorics */; };
+		BFFD8FF42B30E8FA00BCF12A /* Combinatorics in Frameworks */ = {isa = PBXBuildFile; productRef = BFFD8FF32B30E8FA00BCF12A /* Combinatorics */; };
+		BFFD8FF52B30E8FA00BCF12A /* Combinatorics in Embed Frameworks */ = {isa = PBXBuildFile; productRef = BFFD8FF32B30E8FA00BCF12A /* Combinatorics */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -175,6 +178,20 @@
 			remoteInfo = AOC2023;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		BFFD8FF62B30E8FA00BCF12A /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				BFFD8FF52B30E8FA00BCF12A /* Combinatorics in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		BF3E12B72B1D5D5000F148F3 /* AOC2023.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AOC2023.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -268,6 +285,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BFFD8FF12B30E82300BCF12A /* Combinatorics in Frameworks */,
 				BF3E130B2B1D5EA500F148F3 /* AOCLib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -276,6 +294,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BFFD8FF42B30E8FA00BCF12A /* Combinatorics in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -288,6 +307,7 @@
 				BF3E12B92B1D5D5000F148F3 /* AOC2023 */,
 				BF3E12CA2B1D5D5100F148F3 /* AOC2023Tests */,
 				BF3E12B82B1D5D5000F148F3 /* Products */,
+				BFFD8FF22B30E8FA00BCF12A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -612,6 +632,13 @@
 			path = 17;
 			sourceTree = "<group>";
 		};
+		BFFD8FF22B30E8FA00BCF12A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -630,6 +657,7 @@
 			name = AOC2023;
 			packageProductDependencies = (
 				BF3E130A2B1D5EA500F148F3 /* AOCLib */,
+				BFFD8FF02B30E82300BCF12A /* Combinatorics */,
 			);
 			productName = AOC2023;
 			productReference = BF3E12B72B1D5D5000F148F3 /* AOC2023.app */;
@@ -642,6 +670,7 @@
 				BF3E12C32B1D5D5100F148F3 /* Sources */,
 				BF3E12C42B1D5D5100F148F3 /* Frameworks */,
 				BF3E12C52B1D5D5100F148F3 /* Resources */,
+				BFFD8FF62B30E8FA00BCF12A /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -649,6 +678,9 @@
 				BF3E12C92B1D5D5100F148F3 /* PBXTargetDependency */,
 			);
 			name = AOC2023Tests;
+			packageProductDependencies = (
+				BFFD8FF32B30E8FA00BCF12A /* Combinatorics */,
+			);
 			productName = AOC2023Tests;
 			productReference = BF3E12C72B1D5D5100F148F3 /* AOC2023Tests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
@@ -683,6 +715,7 @@
 			mainGroup = BF3E12AE2B1D5D5000F148F3;
 			packageReferences = (
 				BF3E13092B1D5EA500F148F3 /* XCRemoteSwiftPackageReference "AOCLib" */,
+				BFFD8FEF2B30E82300BCF12A /* XCRemoteSwiftPackageReference "swift-combinatorics" */,
 			);
 			productRefGroup = BF3E12B82B1D5D5000F148F3 /* Products */;
 			projectDirPath = "";
@@ -1151,6 +1184,14 @@
 				kind = branch;
 			};
 		};
+		BFFD8FEF2B30E82300BCF12A /* XCRemoteSwiftPackageReference "swift-combinatorics" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/dankogai/swift-combinatorics.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.1.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -1158,6 +1199,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = BF3E13092B1D5EA500F148F3 /* XCRemoteSwiftPackageReference "AOCLib" */;
 			productName = AOCLib;
+		};
+		BFFD8FF02B30E82300BCF12A /* Combinatorics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BFFD8FEF2B30E82300BCF12A /* XCRemoteSwiftPackageReference "swift-combinatorics" */;
+			productName = Combinatorics;
+		};
+		BFFD8FF32B30E8FA00BCF12A /* Combinatorics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BFFD8FEF2B30E82300BCF12A /* XCRemoteSwiftPackageReference "swift-combinatorics" */;
+			productName = Combinatorics;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
