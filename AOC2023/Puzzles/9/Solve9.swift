@@ -8,11 +8,11 @@ class Solve9: PuzzleSolver {
 	}
 
 	func solveBExamples() -> Bool {
-		solveB("Example9") == 0
+		solveB("Example9") == 2
 	}
 
 	var answerA = "1904165718"
-	var answerB = "0"
+	var answerB = "964"
 
 	func solveA() -> String {
 		solveA("Input9").description
@@ -29,13 +29,22 @@ class Solve9: PuzzleSolver {
 		return nextValues.reduce(0, +)
 	}
 
-	func solveB(_: String) -> Int {
-		return 0
+	func solveB(_ filename: String) -> Int {
+		let report = load(filename)
+		let changes = report.histories.map { $0.allChanges }
+		let prevValues = changes.map(prevValue)
+		return prevValues.reduce(0, +)
 	}
 	
 	func nextValue(histories: [Report.History]) -> Int {
 		histories.reversed().reduce(0) {
 			$0 + $1.values.last!
+		}
+	}
+	
+	func prevValue(histories: [Report.History]) -> Int {
+		histories.reversed().reduce(0) {
+			$1.values.first! - $0
 		}
 	}
 	
