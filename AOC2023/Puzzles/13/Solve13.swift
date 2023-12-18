@@ -4,7 +4,7 @@ import Foundation
 
 class Solve13: PuzzleSolver {
 	func solveAExamples() -> Bool {
-		solveA("Example13") == 0
+		solveA("Example13") == 405
 	}
 
 	func solveBExamples() -> Bool {

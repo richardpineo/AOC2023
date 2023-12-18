@@ -163,6 +163,7 @@
 		BF9C00E52B268FC3005111FB /* Input17.txt in Resources */ = {isa = PBXBuildFile; fileRef = BF9C006E2B268FC3005111FB /* Input17.txt */; };
 		BF9C00E62B268FC3005111FB /* Input17.txt in Resources */ = {isa = PBXBuildFile; fileRef = BF9C006E2B268FC3005111FB /* Input17.txt */; };
 		BFC6ADEC2B2EA9BF00D1F461 /* Example8b.txt in Resources */ = {isa = PBXBuildFile; fileRef = BFC6ADEB2B2EA9BF00D1F461 /* Example8b.txt */; };
+		BFFD8FEE2B30CBA800BCF12A /* Example10-2.txt in Resources */ = {isa = PBXBuildFile; fileRef = BFFD8FED2B30CBA800BCF12A /* Example10-2.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -259,6 +260,7 @@
 		BF9C006D2B268FC3005111FB /* Solve17.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Solve17.swift; sourceTree = "<group>"; };
 		BF9C006E2B268FC3005111FB /* Input17.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Input17.txt; sourceTree = "<group>"; };
 		BFC6ADEB2B2EA9BF00D1F461 /* Example8b.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Example8b.txt; sourceTree = "<group>"; };
+		BFFD8FED2B30CBA800BCF12A /* Example10-2.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Example10-2.txt"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -593,6 +595,7 @@
 			isa = PBXGroup;
 			children = (
 				BF9C00682B268FC3005111FB /* Example10.txt */,
+				BFFD8FED2B30CBA800BCF12A /* Example10-2.txt */,
 				BF9C00692B268FC3005111FB /* Solve10.swift */,
 				BF9C006A2B268FC3005111FB /* Input10.txt */,
 			);
@@ -727,6 +730,7 @@
 				BF9C00D92B268FC3005111FB /* Input14.txt in Resources */,
 				BF9C00A12B268FC3005111FB /* Example11.txt in Resources */,
 				BF9C00872B268FC3005111FB /* Input24.txt in Resources */,
+				BFFD8FEE2B30CBA800BCF12A /* Example10-2.txt in Resources */,
 				BF9C006F2B268FC3005111FB /* Example13.txt in Resources */,
 				BF9C00132B268570005111FB /* Input4.txt in Resources */,
 				BF9C00192B268E10005111FB /* Example5.txt in Resources */,
