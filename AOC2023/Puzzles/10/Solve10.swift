@@ -4,12 +4,14 @@ import Foundation
 
 class Solve10: PuzzleSolver {
 	func solveAExamples() -> Bool {
-		solveA("Example10") == 4 &&
-		solveA("Example10-2") == 8
+		solveA("Example10a") == 4 &&
+		solveA("Example10a-2") == 8
 	}
 
 	func solveBExamples() -> Bool {
-		solveB("Example10") == 0
+		solveB("Example10b") == 4 &&
+		solveB("Example10b-2") == 8 &&
+		solveB("Example10b-3") == 10
 	}
 
 	var answerA = "7066"
