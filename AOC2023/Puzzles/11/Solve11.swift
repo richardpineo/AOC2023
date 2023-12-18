@@ -5,25 +5,29 @@ import Combinatorics
 
 class Solve11: PuzzleSolver {
 	func solveAExamples() -> Bool {
-		solveA("Example11") == 374
+		solve("Example11", factor: 1) == 374
 	}
 
 	func solveBExamples() -> Bool {
-		solveB("Example11") == 0
+		solve("Example11", factor: 9) == 1030 &&
+		solve("Example11", factor: 99) == 8410
 	}
 
 	var answerA = "9370588"
-	var answerB = "0"
+	var answerB = "746207878188"
+
+	var shouldTestA: Bool = false
+	var shouldTestB: Bool = false
 
 	func solveA() -> String {
-		solveA("Input11").description
+		solve("Input11", factor: 1).description
 	}
 
 	func solveB() -> String {
-		solveB("Input11").description
+		solve("Input11", factor: 999999).description
 	}
-
-	func solveA(_ filename: String) -> Int {
+	
+	func solve(_ filename: String, factor: Int) -> Int {
 		let space = load(filename)
 		let emptyRows = (0 ..< space.maxPos.y).filter { y in
 			!space.galaxies.contains { galaxy in
@@ -37,7 +41,7 @@ class Solve11: PuzzleSolver {
 		}
 		
 		// Shift the galaxies appropriately.
-		let shifted = space.shift(expandRows: emptyCols, expandCols: emptyRows)
+		let shifted = space.shift(expandRows: emptyCols, expandCols: emptyRows, factor: factor)
 
 		let pairs =  Combination(of: 0 ..< shifted.galaxies.count, size: 2)
 		let distances = pairs.map {
@@ -56,15 +60,15 @@ class Solve11: PuzzleSolver {
 		var galaxies: [Position2D]
 		var maxPos: Position2D
 		
-		func shift(pos: Position2D, expandRows: [Int], expandCols: [Int]) -> Position2D {
+		func shift(pos: Position2D, expandRows: [Int], expandCols: [Int], factor: Int) -> Position2D {
 			let colShift = expandRows.filter { $0 < pos.x }.count
 			let rowShift = expandCols.filter { $0 < pos.y }.count
-			return pos.offset(colShift, rowShift)
+			return pos.offset(colShift * factor, rowShift * factor)
 		}
 		
-		func shift(expandRows: [Int], expandCols: [Int]) -> Space {
-			let shiftedGalaxy = galaxies.map { shift(pos: $0, expandRows: expandRows, expandCols: expandCols)}
-			return .init(galaxies: shiftedGalaxy, maxPos: shift(pos: maxPos,expandRows: expandRows, expandCols: expandCols))
+		func shift(expandRows: [Int], expandCols: [Int], factor: Int) -> Space {
+			let shiftedGalaxy = galaxies.map { shift(pos: $0, expandRows: expandRows, expandCols: expandCols, factor: factor)}
+			return .init(galaxies: shiftedGalaxy, maxPos: shift(pos: maxPos,expandRows: expandRows, expandCols: expandCols, factor: factor))
 		}
 	}
 	
