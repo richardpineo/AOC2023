@@ -35,27 +35,27 @@ class Solve9: PuzzleSolver {
 		let prevValues = changes.map(prevValue)
 		return prevValues.reduce(0, +)
 	}
-	
+
 	func nextValue(histories: [Report.History]) -> Int {
 		histories.reversed().reduce(0) {
 			$0 + $1.values.last!
 		}
 	}
-	
+
 	func prevValue(histories: [Report.History]) -> Int {
 		histories.reversed().reduce(0) {
 			$1.values.first! - $0
 		}
 	}
-	
+
 	struct Report {
 		struct History {
 			var values: [Int]
-			
+
 			var isZeroes: Bool {
 				values.allSatisfy { $0 == 0 }
 			}
-			
+
 			var changes: History {
 				var changeValues: [Int] = []
 				for index in 0 ..< values.count - 1 {
@@ -63,7 +63,7 @@ class Solve9: PuzzleSolver {
 				}
 				return .init(values: changeValues)
 			}
-			
+
 			var allChanges: [History] {
 				var result: [History] = []
 				var current = self
@@ -74,14 +74,14 @@ class Solve9: PuzzleSolver {
 				return result
 			}
 		}
-		
+
 		var histories: [History]
 	}
-	
+
 	func load(_ filename: String) -> Report {
 		let lines = FileHelper.load(filename)!.filter { !$0.isEmpty }
 		return .init(histories: lines.map {
-			.init( values: $0.split(separator: " ").map { Int($0)! })
+			.init(values: $0.split(separator: " ").map { Int($0)! })
 		})
 	}
 }
