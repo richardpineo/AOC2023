@@ -25,7 +25,7 @@ class Puzzles2023: PuzzlesRepo {
 			Puzzle(year: year, id: 16, name: "The Floor Will Be Lava") { Solve16() },
 			Puzzle(year: year, id: 17, name: "Clumsy Crucible") { Solve17() },
 			Puzzle(year: year, id: 18, name: "Lavaduct Lagoon") { Solve18() },
-			Puzzle(year: year, id: 19, name: "") { Solve19() },
+			Puzzle(year: year, id: 19, name: "Aplenty") { Solve19() },
 			Puzzle(year: year, id: 20, name: "") { Solve20() },
 			Puzzle(year: year, id: 21, name: "") { Solve21() },
 			Puzzle(year: year, id: 22, name: "") { Solve22() },
