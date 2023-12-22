@@ -11,7 +11,7 @@ class Solve12: PuzzleSolver {
 		solveB("Example12") == 0
 	}
 
-	var answerA = "0"
+	var answerA = "7221"
 	var answerB = "0"
 
 	func solveA() -> String {
@@ -24,7 +24,10 @@ class Solve12: PuzzleSolver {
 
 	func solveA(_ filename: String) -> Int {
 		let records = load(filename)
-		return 0
+		let counts = records.rows.map {
+			rowArrangements($0)
+		}
+		return counts.reduce(0, +)
 	}
 
 	func solveB(_: String) -> Int {
@@ -44,6 +47,57 @@ class Solve12: PuzzleSolver {
 		var rows: [Row]
 	}
 	
+	func couldPass(springs: [Condition], broken: [Int]) -> Bool {
+		let currentBroken = springs.split(whereSeparator: {$0 == .operational || $0 == .unknown })
+		if currentBroken.isEmpty {
+			return true
+		}
+		let brokenIndex = currentBroken.count - 1
+		if brokenIndex >= broken.count {
+			return false
+		}
+		if currentBroken.last!.count > broken[brokenIndex] {
+			return false
+		}
+
+		return true
+	}
+	
+	func doesPass(springs: [Condition], broken: [Int]) -> Bool {
+		let actualBroken = springs.split(whereSeparator: {$0 == .operational || $0 == .unknown })
+		let counts = actualBroken.map { $0.count }
+		return counts == broken
+	}
+		
+	func rowArrangements(_ row: Records.Row) -> Int {
+		var possibilities: Queue<[Condition]> = .init(from: [row.springs])
+		var complete: [[Condition]] = []
+		while let next = possibilities.dequeue() {
+			let index = next.firstIndex { $0 == .unknown }
+			guard let index = index else {
+				if doesPass(springs: next, broken: row.broken) {
+					complete.append(next)
+				}
+				continue
+			}
+			
+			var p1 = next
+			var p2 = next
+			p1[index] = .damaged
+			p2[index] = .operational
+			
+			if couldPass(springs: Array( p1[0 ... index]), broken: row.broken) {
+				possibilities.enqueue(p1)
+			}
+			
+			if couldPass(springs: Array(p2[0 ... index]), broken: row.broken) {
+				possibilities.enqueue(p2)
+			}
+		}
+		
+		return complete.count
+	}
+		
 	func load(_ filename: String) -> Records {
 		let lines = FileHelper.load(filename)!.filter { !$0.isEmpty }
 		
