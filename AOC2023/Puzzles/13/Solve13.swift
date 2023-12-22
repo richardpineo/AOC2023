@@ -4,17 +4,17 @@ import Foundation
 
 class Solve13: PuzzleSolver {
 	func solveAExamples() -> Bool {
-		testProblematicA() &&
+		problematicA() &&
 		solveA("Example13") == 405
 	}
 
 	func solveBExamples() -> Bool {
-		testProblematicB() && 
+		problematicB() && 
 		solveB("Example13") == 400
 	}
 
 	var answerA = "30158"
-	var answerB = "0"
+	var answerB = "36474"
 
 	func solveA() -> String {
 		solveA("Input13").description
@@ -26,14 +26,14 @@ class Solve13: PuzzleSolver {
 
 	let verbose = false
 	
-	func gridScore(_ grid: Grid2D) -> Int {
+	func gridScore(_ grid: Grid2D, ignore: Int?) -> Int {
 		if verbose {
 			print("")
 			print(grid.debugDisplay)
 		}
 		
-		let horz = horizScore(grid: grid)
-		let vert = vertScore(grid: grid)
+		let horz = horizScore(grid: grid, ignore: ignore)
+		let vert = vertScore(grid: grid, ignore: ignore)
 
 		if verbose {
 			if horz > 0 {
@@ -47,7 +47,7 @@ class Solve13: PuzzleSolver {
 			}
 		}
 
-		return horz * 100 + vert
+		return horz + vert
 	}
 
 	func divides(row: Int, grid: Grid2D) -> Bool {
@@ -91,17 +91,24 @@ class Solve13: PuzzleSolver {
 		return true
 	}
 	
-	func horizScore(grid: Grid2D) -> Int {
+	func horizScore(grid: Grid2D, ignore: Int?) -> Int {
 		for x in 1 ..< grid.maxPos.y {
+			let score = x * 100
+			if score == ignore {
+				continue
+			}
 			if divides(row: x, grid: grid) {
-				return x
+				return score
 			}
 		}
 		return 0
 	}
 
-	func vertScore(grid: Grid2D) -> Int {
+	func vertScore(grid: Grid2D, ignore: Int?) -> Int {
 		for y in 1 ..< grid.maxPos.x  {
+			if y == ignore {
+				continue
+			}
 			if divides(col: y, grid: grid) {
 				return y
 			}
@@ -111,7 +118,7 @@ class Solve13: PuzzleSolver {
 	
 	func solveA(_ filename: String) -> Int {
 		let grids = load(filename)
-		let scores = grids.map(gridScore)
+		let scores = grids.map{ gridScore($0, ignore: nil) }
 		return scores.reduce(0, +)
 	}
 
@@ -123,21 +130,18 @@ class Solve13: PuzzleSolver {
 	}
 	
 	func smudgeScore(_ grid: Grid2D) -> Int {
-		let originalScore = gridScore(grid)
+		let originalScore = gridScore(grid, ignore: nil)
 		let smudgePos = grid.allPositions.first {
-			if $0 == .init(6,5) {
-				print("BOO")
-			}
 			let smudged = smudge(grid, $0)
-			let smudgeScore = gridScore(smudged)
-			return smudgeScore > 0 && smudgeScore != originalScore
+			let smudgeScore = gridScore(smudged, ignore: originalScore)
+			return smudgeScore > 0
 		}
 		guard let smudged = smudgePos else {
 			print("FAIL")
 			print(grid.debugDisplay)
 			return -666
 		}
-		return gridScore(smudge(grid, smudged))
+		return gridScore(smudge(grid, smudged), ignore: originalScore)
 	}
 	
 	func solveB(_ filename: String) -> Int {
@@ -154,7 +158,7 @@ class Solve13: PuzzleSolver {
 		}
 	}
 	
-	func testProblematicA() -> Bool {
+	func problematicA() -> Bool {
 let problematic = """
 ########.....
 ...##.....##.
@@ -171,11 +175,11 @@ let problematic = """
 #.####.#.....
 """
 		let grid = Grid2D(lines: problematic.split(separator: "\n").map { String($0) })
-		print (grid.debugDisplay)
-		return gridScore(grid) == 1200
+	//	print (grid.debugDisplay)
+		return gridScore(grid, ignore: nil) == 1200
 	}
 	
-	func testProblematicB() -> Bool{
+	func problematicB() -> Bool{
 let problematic = """
 .###...#.....
 .###...#.....
@@ -192,7 +196,7 @@ let problematic = """
 .###...#.....
 """
 		let grid = Grid2D(lines: problematic.split(separator: "\n").map { String($0) })
-		print (grid.debugDisplay)
-		return smudgeScore(grid) == 666
+	//	print (grid.debugDisplay)
+		return smudgeScore(grid) == 700
 	}
 }
