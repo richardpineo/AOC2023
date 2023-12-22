@@ -21,7 +21,7 @@ class Solve14: PuzzleSolver {
 	func solveB() -> String {
 		solveB("Input14").description
 	}
-	
+
 	func findTarget(pos: Position2D, grid: inout Grid2D, direction: Heading) -> Position2D? {
 		switch direction {
 		case .north:
@@ -29,7 +29,7 @@ class Solve14: PuzzleSolver {
 				return nil
 			}
 			return pos.offset(0, -1)
-			
+
 		case .south:
 			if pos.y >= grid.maxPos.y - 1 {
 				return nil
@@ -49,21 +49,21 @@ class Solve14: PuzzleSolver {
 			return pos.offset(1, 0)
 		}
 	}
-	
+
 	func roll(pos: Position2D, grid: inout Grid2D, direction: Heading) {
 		guard let target = findTarget(pos: pos, grid: &grid, direction: direction) else {
 			return
 		}
-		
-		if grid.value(pos) == "O" && grid.value(target) == "." {
+
+		if grid.value(pos) == "O", grid.value(target) == "." {
 			grid.setValue(target, "O")
 			grid.setValue(pos, ".")
 			roll(pos: target, grid: &grid, direction: direction)
 		}
 	}
-	
+
 	func load(on grid: Grid2D) -> Int {
-		 grid.allPositions.reduce(0) {
+		grid.allPositions.reduce(0) {
 			var score = 0
 			if grid.value($1) == "O" {
 				score = grid.maxPos.y - $1.y
@@ -71,7 +71,7 @@ class Solve14: PuzzleSolver {
 			return $0 + score
 		}
 	}
-	
+
 	func evalOrder(grid: Grid2D, direction: Heading) -> [Position2D] {
 		grid.allPositions.sorted { p1, p2 in
 			switch direction {
@@ -86,7 +86,7 @@ class Solve14: PuzzleSolver {
 			}
 		}
 	}
-	
+
 	func roll(grid: inout Grid2D, direction: Heading) {
 		evalOrder(grid: grid, direction: direction).forEach {
 			roll(pos: $0, grid: &grid, direction: direction)
@@ -98,34 +98,35 @@ class Solve14: PuzzleSolver {
 		roll(grid: &grid, direction: .north)
 		return load(on: grid)
 	}
-	
+
 	struct Instance {
 		var grid: Grid2D
 		var count: Int
 	}
+
 	var cache: [Grid2D: Instance] = [:]
-	
+
 	func cycle(grid: inout Grid2D, count: Int) -> Int? {
 		if let found = cache[grid] {
 			grid = found.grid
 			return found.count
 		}
 		let initialGrid = grid.clone()
-		
+
 		roll(grid: &grid, direction: .north)
 		roll(grid: &grid, direction: .west)
 		roll(grid: &grid, direction: .south)
 		roll(grid: &grid, direction: .east)
 
-		cache[initialGrid]  = .init(grid: grid, count: count)
+		cache[initialGrid] = .init(grid: grid, count: count)
 		// print("Load: \(load(on: grid))")
 		return nil
 	}
 
 	func solveB(_ filename: String) -> Int {
 		var grid = Grid2D(fileName: filename)
-		
-		let count = 1000000000
+
+		let count = 1_000_000_000
 		var repeatsAt = 0
 		var repeatsSourceIndex = 0
 		for c in 0 ... count {
@@ -136,7 +137,7 @@ class Solve14: PuzzleSolver {
 			}
 		}
 		// print("index \(repeatsAt) repeats. First seen at \(repeatsSourceIndex)")
-		
+
 		let completeCount = (count - repeatsSourceIndex - 1) % (repeatsAt - repeatsSourceIndex) + repeatsSourceIndex
 		let foundInCache = cache.first {
 			$0.value.count == completeCount
