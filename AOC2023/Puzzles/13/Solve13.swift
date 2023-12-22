@@ -4,12 +4,13 @@ import Foundation
 
 class Solve13: PuzzleSolver {
 	func solveAExamples() -> Bool {
-		testProblematicOnes() &&
+		testProblematicA() &&
 		solveA("Example13") == 405
 	}
 
 	func solveBExamples() -> Bool {
-		solveB("Example13") == 0
+		testProblematicB() && 
+		solveB("Example13") == 400
 	}
 
 	var answerA = "30158"
@@ -23,7 +24,7 @@ class Solve13: PuzzleSolver {
 		solveB("Input13").description
 	}
 
-	let verbose = true
+	let verbose = false
 	
 	func gridScore(_ grid: Grid2D) -> Int {
 		if verbose {
@@ -47,12 +48,6 @@ class Solve13: PuzzleSolver {
 		}
 
 		return horz * 100 + vert
-	}
-	
-	func solveA(_ filename: String) -> Int {
-		let grids = load(filename)
-		let scores = grids.map(gridScore)
-		return scores.reduce(0, +)
 	}
 
 	func divides(row: Int, grid: Grid2D) -> Bool {
@@ -114,8 +109,41 @@ class Solve13: PuzzleSolver {
 		return 0
 	}
 	
-	func solveB(_: String) -> Int {
-		return 0
+	func solveA(_ filename: String) -> Int {
+		let grids = load(filename)
+		let scores = grids.map(gridScore)
+		return scores.reduce(0, +)
+	}
+
+	func smudge(_ grid: Grid2D, _ position: Position2D) -> Grid2D {
+		var smudged = grid.clone()
+		let smudgeValue = grid.value(position) == "#" ? ":" : "#"
+		smudged.setValue(position, Character( smudgeValue))
+		return smudged
+	}
+	
+	func smudgeScore(_ grid: Grid2D) -> Int {
+		let originalScore = gridScore(grid)
+		let smudgePos = grid.allPositions.first {
+			if $0 == .init(6,5) {
+				print("BOO")
+			}
+			let smudged = smudge(grid, $0)
+			let smudgeScore = gridScore(smudged)
+			return smudgeScore > 0 && smudgeScore != originalScore
+		}
+		guard let smudged = smudgePos else {
+			print("FAIL")
+			print(grid.debugDisplay)
+			return -666
+		}
+		return gridScore(smudge(grid, smudged))
+	}
+	
+	func solveB(_ filename: String) -> Int {
+		let grids = load(filename)
+		let scores = grids.map(smudgeScore)
+		return scores.reduce(0, +)
 	}
 
 	func load(_ filename: String) -> [Grid2D] {
@@ -126,11 +154,7 @@ class Solve13: PuzzleSolver {
 		}
 	}
 	
-	func testProblematicOnes() -> Bool {
-		testProblematic()
-	}
-	
-	func testProblematic() -> Bool{
+	func testProblematicA() -> Bool {
 let problematic = """
 ########.....
 ...##.....##.
@@ -149,5 +173,26 @@ let problematic = """
 		let grid = Grid2D(lines: problematic.split(separator: "\n").map { String($0) })
 		print (grid.debugDisplay)
 		return gridScore(grid) == 1200
+	}
+	
+	func testProblematicB() -> Bool{
+let problematic = """
+.###...#.....
+.###...#.....
+..####.#####.
+...#.##.##.##
+#.###...###..
+####.#.#.###.
+#.#.#.##...##
+#.#.#.##...##
+####.###.###.
+#.###...###..
+...#.##.##.##
+..####.#####.
+.###...#.....
+"""
+		let grid = Grid2D(lines: problematic.split(separator: "\n").map { String($0) })
+		print (grid.debugDisplay)
+		return smudgeScore(grid) == 666
 	}
 }
