@@ -163,6 +163,7 @@
 		BF9C00E52B268FC3005111FB /* Input17.txt in Resources */ = {isa = PBXBuildFile; fileRef = BF9C006E2B268FC3005111FB /* Input17.txt */; };
 		BF9C00E62B268FC3005111FB /* Input17.txt in Resources */ = {isa = PBXBuildFile; fileRef = BF9C006E2B268FC3005111FB /* Input17.txt */; };
 		BFC6ADEC2B2EA9BF00D1F461 /* Example8b.txt in Resources */ = {isa = PBXBuildFile; fileRef = BFC6ADEB2B2EA9BF00D1F461 /* Example8b.txt */; };
+		BFCBA2272B351794005C3C28 /* Example20-2.txt in Resources */ = {isa = PBXBuildFile; fileRef = BFCBA2262B351794005C3C28 /* Example20-2.txt */; };
 		BFFD8FEE2B30CBA800BCF12A /* Example10a-2.txt in Resources */ = {isa = PBXBuildFile; fileRef = BFFD8FED2B30CBA800BCF12A /* Example10a-2.txt */; };
 		BFFD8FF12B30E82300BCF12A /* Combinatorics in Frameworks */ = {isa = PBXBuildFile; productRef = BFFD8FF02B30E82300BCF12A /* Combinatorics */; };
 		BFFD8FF42B30E8FA00BCF12A /* Combinatorics in Frameworks */ = {isa = PBXBuildFile; productRef = BFFD8FF32B30E8FA00BCF12A /* Combinatorics */; };
@@ -280,6 +281,7 @@
 		BF9C006D2B268FC3005111FB /* Solve17.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Solve17.swift; sourceTree = "<group>"; };
 		BF9C006E2B268FC3005111FB /* Input17.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Input17.txt; sourceTree = "<group>"; };
 		BFC6ADEB2B2EA9BF00D1F461 /* Example8b.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Example8b.txt; sourceTree = "<group>"; };
+		BFCBA2262B351794005C3C28 /* Example20-2.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Example20-2.txt"; sourceTree = "<group>"; };
 		BFFD8FED2B30CBA800BCF12A /* Example10a-2.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Example10a-2.txt"; sourceTree = "<group>"; };
 		BFFD8FF72B31032700BCF12A /* Example10b-2.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Example10b-2.txt"; sourceTree = "<group>"; };
 		BFFD8FF82B31032700BCF12A /* Example10b.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Example10b.txt; sourceTree = "<group>"; };
@@ -454,6 +456,7 @@
 				BF9C00242B268FC3005111FB /* Input20.txt */,
 				BF9C00252B268FC3005111FB /* Solve20.swift */,
 				BF9C00262B268FC3005111FB /* Example20.txt */,
+				BFCBA2262B351794005C3C28 /* Example20-2.txt */,
 			);
 			path = 20;
 			sourceTree = "<group>";
@@ -781,6 +784,7 @@
 				BF9C00192B268E10005111FB /* Example5.txt in Resources */,
 				BF3E12BF2B1D5D5100F148F3 /* Assets.xcassets in Resources */,
 				BF3E12FF2B1D5E5300F148F3 /* Input2.txt in Resources */,
+				BFCBA2272B351794005C3C28 /* Example20-2.txt in Resources */,
 				BF9C00092B255862005111FB /* Example3b.txt in Resources */,
 				BF44DECA2B1D644A001964F7 /* Example1b.txt in Resources */,
 				BF9C000F2B268570005111FB /* Example4.txt in Resources */,
