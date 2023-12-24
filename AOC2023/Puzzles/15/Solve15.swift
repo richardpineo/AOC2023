@@ -11,7 +11,7 @@ class Solve15: PuzzleSolver {
 		solveB("Example15") == 0
 	}
 
-	var answerA = "0"
+	var answerA = "518107"
 	var answerB = "0"
 
 	func solveA() -> String {
@@ -22,8 +22,22 @@ class Solve15: PuzzleSolver {
 		solveB("Input15").description
 	}
 
-	func solveA(_: String) -> Int {
-		return 0
+	func applyHash(_ s: String) -> Int {
+		s.reduce(0) {
+			var next = $0 + Int($1.asciiValue!)
+			next = next * 17
+			next = next % 256
+			return next
+		}
+	}
+
+	func solveA(_ filename: String) -> Int {
+		let raw = FileHelper.load(filename)!
+			.filter { !$0.isEmpty }
+			.first!
+		let commands = raw.split(separator: ",").map(String.init)
+		let hashed = commands.map(applyHash)
+		return hashed.reduce(0, +)
 	}
 
 	func solveB(_: String) -> Int {
