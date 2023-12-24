@@ -29,7 +29,7 @@ class Puzzles2023: PuzzlesRepo {
 			Puzzle(year: year, id: 20, name: "Pulse Propagation") { Solve20() },
 			Puzzle(year: year, id: 21, name: "Step Counter") { Solve21() },
 			Puzzle(year: year, id: 22, name: "Sand Slabs") { Solve22() },
-			Puzzle(year: year, id: 23, name: "") { Solve23() },
+			Puzzle(year: year, id: 23, name: "A Long Walk") { Solve23() },
 			Puzzle(year: year, id: 24, name: "") { Solve24() },
 			Puzzle(year: year, id: 25, name: "") { Solve25() },
 		])
