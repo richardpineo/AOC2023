@@ -11,7 +11,7 @@ class Solve16: PuzzleSolver {
 		solveB("Example16") == 0
 	}
 
-	var answerA = "0"
+	var answerA = "8539"
 	var answerB = "0"
 
 	func solveA() -> String {
@@ -25,6 +25,22 @@ class Solve16: PuzzleSolver {
 	struct Cells {
 		let grid: Grid2D
 		var visited: Set<Beam> = .init()
+		
+		func numVisited(pos: Position2D) -> Int {
+			visited.filter { $0.pos == pos }.count
+		}
+		
+		func debugDisplay() {
+			var s = ""
+			for y in 0 ..< grid.maxPos.y {
+				for x in 0 ..< grid.maxPos.x {
+					let num = numVisited(pos: .init(x,y))
+					s += ("\(num > 0 ? "#" : ".")")
+				}
+				s += "\n"
+			}
+			print("\(s)")
+		}
 	}
 
 	struct Beam: Hashable {
@@ -64,7 +80,7 @@ class Solve16: PuzzleSolver {
 			} else {
 				return [nextBeam]
 			}
-		case "/":
+		case "\\":
 			switch beam.heading {
 			case .east:
 				return [.init(pos: nextPos, heading: .north)]
@@ -76,7 +92,7 @@ class Solve16: PuzzleSolver {
 				return [.init(pos: nextPos, heading: .west)]
 			}
 
-		case "\\":
+		case "/":
 			switch beam.heading {
 			case .east:
 				return [.init(pos: nextPos, heading: .south)]
@@ -95,15 +111,23 @@ class Solve16: PuzzleSolver {
 
 	func solveA(_ filename: String) -> Int {
 		let grid: Grid2D = .init(fileName: filename)
+//		print("\(grid.debugDisplay)")
 
-		// Each cell has light in up to 4 directions
 		var cells: Cells = .init(grid: grid)
 
-		let start: Beam = .init(pos: .origin, heading: .east)
-		var beams: [Beam] = [start]
-		cells.visited.insert(start)
-
-		return 0
+		var beams: Queue<Beam> = .init()
+		beams.enqueue(.init(pos: .init(-1, 0), heading: .east))
+		while let beam = beams.dequeue() {
+			let newBeams = stepBeam(beam: beam, cells: &cells)
+			newBeams.forEach {
+				beams.enqueue($0)
+			}
+		}
+		
+		let energized = grid.allPositions.reduce(0) {
+			$0 + (cells.numVisited(pos: $1) > 0 ? 1 : 0)
+		}
+		return energized
 	}
 
 	func solveB(_: String) -> Int {
