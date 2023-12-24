@@ -25,17 +25,17 @@ class Solve16: PuzzleSolver {
 	struct Cells {
 		let grid: Grid2D
 		var visited: Set<Beam> = .init()
-		
+
 		func numVisited(pos: Position2D) -> Int {
 			visited.filter { $0.pos == pos }.count
 		}
-		
+
 		func debugDisplay() {
 			var s = ""
 			for y in 0 ..< grid.maxPos.y {
 				for x in 0 ..< grid.maxPos.x {
-					let num = numVisited(pos: .init(x,y))
-					s += ("\(num > 0 ? "#" : ".")")
+					let num = numVisited(pos: .init(x, y))
+					s += "\(num > 0 ? "#" : ".")"
 				}
 				s += "\n"
 			}
@@ -123,7 +123,7 @@ class Solve16: PuzzleSolver {
 				beams.enqueue($0)
 			}
 		}
-		
+
 		let energized = grid.allPositions.reduce(0) {
 			$0 + (cells.numVisited(pos: $1) > 0 ? 1 : 0)
 		}
