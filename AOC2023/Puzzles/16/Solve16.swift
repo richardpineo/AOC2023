@@ -8,11 +8,13 @@ class Solve16: PuzzleSolver {
 	}
 
 	func solveBExamples() -> Bool {
-		solveB("Example16") == 0
+		solveB("Example16") == 51
 	}
 
 	var answerA = "8539"
-	var answerB = "0"
+	var answerB = "8674"
+	
+	var shouldTestB = false
 
 	func solveA() -> String {
 		solveA("Input16").description
@@ -30,6 +32,12 @@ class Solve16: PuzzleSolver {
 			visited.filter { $0.pos == pos }.count
 		}
 
+		var numVisited: Int {
+			grid.allPositions.reduce(0) {
+				$0 + (numVisited(pos: $1) > 0 ? 1 : 0)
+			}
+		}
+		
 		func debugDisplay() {
 			var s = ""
 			for y in 0 ..< grid.maxPos.y {
@@ -108,15 +116,12 @@ class Solve16: PuzzleSolver {
 			return []
 		}
 	}
-
-	func solveA(_ filename: String) -> Int {
-		let grid: Grid2D = .init(fileName: filename)
-//		print("\(grid.debugDisplay)")
-
+	
+	func solve(grid: Grid2D, starting: Beam) -> Int {
 		var cells: Cells = .init(grid: grid)
 
 		var beams: Queue<Beam> = .init()
-		beams.enqueue(.init(pos: .init(-1, 0), heading: .east))
+		beams.enqueue(starting)
 		while let beam = beams.dequeue() {
 			let newBeams = stepBeam(beam: beam, cells: &cells)
 			newBeams.forEach {
@@ -124,13 +129,34 @@ class Solve16: PuzzleSolver {
 			}
 		}
 
-		let energized = grid.allPositions.reduce(0) {
-			$0 + (cells.numVisited(pos: $1) > 0 ? 1 : 0)
-		}
-		return energized
+		return cells.numVisited
 	}
 
-	func solveB(_: String) -> Int {
-		return 0
+	func solveA(_ filename: String) -> Int {
+		let grid: Grid2D = .init(fileName: filename)
+		return solve(grid: grid, starting:.init(pos: .init(-1, 0), heading: .east))
+	}
+
+	func solveB(_ filename: String) -> Int {
+		let grid: Grid2D = .init(fileName: filename)
+		
+		var startingPositions: [Beam] = []
+		for x in 0 ..< grid.maxPos.x {
+			startingPositions.append(.init(pos: .init(x, -1), heading: .north))
+			startingPositions.append(.init(pos: .init(x, grid.maxPos.y), heading: .south))
+		}
+		for y in 0 ..< grid.maxPos.y {
+			startingPositions.append(.init(pos: .init(-1, y), heading: .east))
+			startingPositions.append(.init(pos: .init(grid.maxPos.x, y), heading: .west))
+		}
+
+		var max = 0
+		startingPositions.forEach {
+			let visited = solve(grid: grid, starting: $0)
+			if visited > max {
+				max = visited
+			}
+		}
+		return max
 	}
 }
