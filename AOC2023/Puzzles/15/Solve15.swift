@@ -44,7 +44,7 @@ class Solve15: PuzzleSolver {
 		var label: String
 		var focal: Int
 	}
-	
+
 	func solveB(_ filename: String) -> Int {
 		let raw = FileHelper.load(filename)!
 			.filter { !$0.isEmpty }
@@ -52,7 +52,7 @@ class Solve15: PuzzleSolver {
 		let commands = raw.split(separator: ",").map(String.init)
 
 		var boxes: [[Lens]] = .init(repeating: [], count: 256)
-		
+
 		commands.forEach { command in
 			if command.last! == "-" {
 				let label = command.subString(start: 0, count: command.count - 1)
@@ -81,18 +81,18 @@ class Solve15: PuzzleSolver {
 				boxes[boxIndex] = box
 			}
 		}
-		
+
 		var power = 0
 		boxes.enumerated().forEach { box in
 			box.element.enumerated().forEach { lens in
 				let lensPower =
 					(box.offset + 1) *
-				(lens.offset + 1) *
-				(lens.element.focal)
+					(lens.offset + 1) *
+					(lens.element.focal)
 				power = power + lensPower
 			}
 		}
-		
+
 		return power
 	}
 }
