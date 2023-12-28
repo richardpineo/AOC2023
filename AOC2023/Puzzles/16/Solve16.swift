@@ -13,7 +13,7 @@ class Solve16: PuzzleSolver {
 
 	var answerA = "8539"
 	var answerB = "8674"
-	
+
 	var shouldTestB = false
 
 	func solveA() -> String {
@@ -37,7 +37,7 @@ class Solve16: PuzzleSolver {
 				$0 + (numVisited(pos: $1) > 0 ? 1 : 0)
 			}
 		}
-		
+
 		func debugDisplay() {
 			var s = ""
 			for y in 0 ..< grid.maxPos.y {
@@ -116,7 +116,7 @@ class Solve16: PuzzleSolver {
 			return []
 		}
 	}
-	
+
 	func solve(grid: Grid2D, starting: Beam) -> Int {
 		var cells: Cells = .init(grid: grid)
 
@@ -134,12 +134,12 @@ class Solve16: PuzzleSolver {
 
 	func solveA(_ filename: String) -> Int {
 		let grid: Grid2D = .init(fileName: filename)
-		return solve(grid: grid, starting:.init(pos: .init(-1, 0), heading: .east))
+		return solve(grid: grid, starting: .init(pos: .init(-1, 0), heading: .east))
 	}
 
 	func solveB(_ filename: String) -> Int {
 		let grid: Grid2D = .init(fileName: filename)
-		
+
 		var startingPositions: [Beam] = []
 		for x in 0 ..< grid.maxPos.x {
 			startingPositions.append(.init(pos: .init(x, -1), heading: .north))

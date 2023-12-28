@@ -8,7 +8,7 @@ class Solve18: PuzzleSolver {
 	}
 
 	func solveBExamples() -> Bool {
-		solveB("Example18") == 0
+		solveB("Example18") == 952408144115
 	}
 
 	var answerA = "49578"
@@ -21,8 +21,50 @@ class Solve18: PuzzleSolver {
 	func solveB() -> String {
 		solveB("Input18").description
 	}
-
+	
 	func solveA(_ filename: String) -> Int {
+		let steps = load(filename)
+		
+		// convert into positions
+		var current = Position2D.origin
+		var trench: [Position2D] = .init([current])
+		var minPos: Position2D = .origin
+		var maxPos: Position2D = .origin
+		steps.forEach {
+			for _ in 0 ..< $0.distance {
+				current = current.offset($0.heading, 1)
+				trench.append(current)
+				if current.x < minPos.x {
+					minPos.x = current.x
+				}
+				if current.x > maxPos.x {
+					maxPos.x = current.x
+				}
+				if current.y < minPos.y {
+					minPos.y = current.y
+				}
+				if current.y > maxPos.y {
+					maxPos.y = current.y
+				}
+			}
+		}
+		minPos = minPos.offset(-1,-1)
+		maxPos = maxPos.offset(1,1)
+
+		let loop: Set<Position2D> = .init(trench)
+		
+		var interior = 0
+		for x in minPos.x ... maxPos.x {
+			for y in minPos.y ... maxPos.y {
+				if pointInLoop(pos: .init(x,y), loop: loop, maxPos: maxPos) {
+					interior += 1
+				}
+			}
+		}
+		return interior + loop.count
+	}
+
+	func solveA2(_ filename: String) -> Int {
 		let steps = load(filename)
 		
 		// convert into positions
