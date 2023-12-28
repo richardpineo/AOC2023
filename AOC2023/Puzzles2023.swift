@@ -31,7 +31,7 @@ class Puzzles2023: PuzzlesRepo {
 			Puzzle(year: year, id: 22, name: "Sand Slabs") { Solve22() },
 			Puzzle(year: year, id: 23, name: "A Long Walk") { Solve23() },
 			Puzzle(year: year, id: 24, name: "Never Tell Me The Odds") { Solve24() },
-			Puzzle(year: year, id: 25, name: "") { Solve25() },
+			Puzzle(year: year, id: 25, name: "Snowverload") { Solve25() },
 		])
 	}
 
